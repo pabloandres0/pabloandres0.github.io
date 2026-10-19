@@ -149,6 +149,8 @@ section{
     min-height: 100vh;
     padding: 10rem 15%;
 }
+
+
 .home {
     position: relative;
     isolation: isolate;
@@ -186,7 +188,6 @@ section{
     font-weight: 500;
     line-height: 1.5;
 }
-
 .home-img img{
     transition: 0.5s ease-in-out;
 
@@ -204,6 +205,8 @@ section{
                 0 0 100px var(--main-color),
                 0 0 75px var(--main-color);
 }
+
+
 .social-icons a{
     display: inline-flex;
     justify-content: center;
@@ -257,6 +260,7 @@ section{
     color: black;
 }
 
+
 .about{
     display: flex;
     justify-content: center;
@@ -286,6 +290,8 @@ section{
 .about-content .btn{
     margin: 3rem 0;
 }
+
+
 .heading{
     text-align: center;
     font-size: 7rem;
@@ -389,10 +395,11 @@ section{
     object-fit: cover;
 }
 .project-card h3{
-    font-size: 3rem;
+    font-size: 4rem;
+    margin-bottom: -1rem;
 }
 .project-card p{
-    font-size: 1.6rem;
+    font-size: 2rem;
     max-width: 75rem;
 }
 .project-card .project-carousel{
@@ -406,6 +413,16 @@ section{
 .project-gallery-image{
     display: none;
 }
+
+.final-project{
+    background-color: var(--alt-color);
+    color: contrast-color(var(--bg-color));
+}
+.fp-content{
+    
+}
+
+
 
 .contact{
     background-color: var(--bg-color);
