@@ -9,7 +9,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.5/css/lightbox.min.css">
     <link href="https://cdn.boxicons.com/3.0.8/fonts/filled/boxicons-filled.min.css" rel="stylesheet">
     <link href="https://cdn.boxicons.com/3.0.8/fonts/brands/boxicons-brands.min.css" rel="stylesheet">
 </head>
@@ -22,7 +21,6 @@
             <span aria-hidden="true">
         </a>
 
-        <!-- nonworking menu icon -->
         <i class="bx bx-menu" id="menu-icon"></i>
 
         <nav class="navbar">
@@ -91,52 +89,92 @@
                 <div class="service-info">
                     <i class="bxl bx-figma"></i>
                     <h4>UI / UX Designer</h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores sed eos numquam quasi aliquam quo, qui unde cupiditate id debitis dolore quibusdam placeat sunt, vero, quidem nemo possimus blanditiis tempore.</p>
+                    <p>hello.</p>
                 </div>
             </div>
             <div class="service-box">
                 <div class="service-info">
                     <i class="bxl bx-visual-studio"></i>
                     <h4>Programmer</h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores sed eos numquam quasi aliquam quo, qui unde cupiditate id debitis dolore quibusdam placeat sunt, vero, quidem nemo possimus blanditiis tempore.</p>
+                    <p>hi.</p>
                 </div>
             </div>
         </div>
     </section>
     <section class="projects" id="projects">
         <h2 class="heading">Design Class Projects</h2>
-
         <div class="projects-box">
-            <div class="project-card">
-                <img src="images/project1.jpg" alt="Design class project 1">
+            <!-- Wordmark Card -->
+            <article class="project-card">
                 <h3>Personal Wordmark</h3>
-                <p>The first ever design activity of my 5th semester was to define a logo or wordmark to use in future assignments. It was the first time I ever attempted with sketching ideas.</p>
-                <a href="images/project1.jpg" class="btn" data-lightbox="design-projects" data-title="Design class project 1">Review Project</a>
-            </div>
-            <div class="project-card">
-                <img src="images/image.jpg" alt="Design class project 2">
+                <p>The first activity of my fifth semester was to define a logo or wordmark for future assignments. It was my first time sketching ideas and developing them into a finished identity.</p>
+                <ul class="project-carousel" aria-label="Personal Wordmark project images">
+                    <li class="item"><div class="content"><img src="images/wordmark/2.png" alt="Personal Wordmark sketches"></div></li>
+                    <li class="item"><div class="content"><img src="images/wordmark/3.png" alt="Personal Wordmark sketch 1"></div></li>
+                    <li class="item"><div class="content"><img src="images/wordmark/4.png" alt="Personal Wordmark sketch 2"></div></li>
+                    <li class="item"><div class="content"><img src="images/wordmark/5.png" alt="Personal Wordmark sketch 3"></div></li>
+                    <li class="item"><div class="content"><img src="images/wordmark/6.png" alt="Personal Wordmark sketch 4"></div></li>
+                    <li class="item"><div class="content"><img src="images/wordmark/7.png" alt="Personal Wordmark sketch 5"></div></li>
+                    <li class="item"><div class="content"><img src="images/wordmark/8.png" alt="Personal Wordmark sketch 6"></div></li>
+                    <li class="item"><div class="content"><img src="images/wordmark/9.png" alt="Personal Wordmark chosen sketeches"></div></li>
+                    <li class="item"><div class="content"><img src="images/wordmark/10.png" alt="Personal Wordmark final design"></div></li>
+                </ul>
+            </article>
+            <!-- Stencil Card -->
+            <article class="project-card">
                 <h3>Stencil Portrait</h3>
-                <p>This activity required .</p>
-                <a href="images/image.jpg" class="btn" data-lightbox="design-projects" data-title="Design class project 2">Review Project</a>
-            </div>
-            <div class="project-card">
-                <img src="images/example.png" alt="Design class project 3">
+                <p>This project explored how a portrait can be simplified into a stencil while preserving the subject’s defining features.</p>
+                <ul class="project-carousel" aria-label="Stencil Portrait project images">
+                    <li class="item"><div class="content"><img src="images/stencil/2.png" alt="Stencil Portrait original image"></div></li>
+                    <li class="item"><div class="content"><img src="images/stencil/3.png" alt="Stencil Portrait black and white edit"></div></li>
+                    <li class="item"><div class="content"><img src="images/stencil/4.png" alt="Stencil Portrait printed stencil"></div></li>
+                    <li class="item"><div class="content"><img src="images/stencil/5.png" alt="Stencil Portrait final stencil"></div></li>
+                </ul>
+            </article>
+            <!-- OG Project Card -->
+            <article class="project-card">
+                <h3>Original Project Sketches and Concept Design</h3>
+                <p>This activity took several weeks to complete. The most difficult part was creating the vectorized sketch and preparing the printable model with Blender.</p>
+                <ul class="project-carousel" aria-label="Tessellation project images">
+                    <li class="item"><div class="content"><img src="images/og/2.png" alt="OG Project objective"></div></li>
+                    <li class="item"><div class="content"><img src="images/og/3.png" alt="OG Project moodboard"></div></li>
+                    <li class="item"><div class="content"><img src="images/og/4.png" alt="OG Project sketches"></div></li>
+                    <li class="item"><div class="content"><img src="images/og/5.png" alt="OG Project lineart"></div></li>
+                    <li class="item"><div class="content"><img src="images/og/6.png" alt="OG Project ai slop"></div></li>
+
+                </ul>
+            </article>
+            <!-- Tessellation Card -->
+            <article class="project-card">
                 <h3>Tessellation</h3>
-                <p>This was a complicated activity, it took a few weeks to get it done. The hardest part was making the vectorized sketch. I made use of a 3D tool, Bleneder, to make the printable model.</p>
-                <a href="images/example.png" class="btn" data-lightbox="design-projects" data-title="Design class project 3">Review Project</a>
-            </div>
-            <div class="project-card">
-                <img src="images/example.png" alt="Design class project 3">
-                <h3>OG Design Project</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum iusto iure, nisi eveniet quod repudiandae totam numquam neque expedita excepturi, dolor aut earum modi! Minus cupiditate officia neque reiciendis eum.</p>
-                <a href="images/example.png" class="btn" data-lightbox="design-projects" data-title="Design class project 3">Review Project</a>
-            </div>
-            <div class="project-card">
-                <img src="images/example.png" alt="Design class project 3">
-                <h3>Tangram</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum iusto iure, nisi eveniet quod repudiandae totam numquam neque expedita excepturi, dolor aut earum modi! Minus cupiditate officia neque reiciendis eum.</p>
-                <a href="images/example.png" class="btn" data-lightbox="design-projects" data-title="Design class project 3">Review Project</a>
-            </div>
+                <p>This activity took several weeks to complete. The most difficult part was creating the vectorized sketch and preparing the printable model with Blender.</p>
+                <ul class="project-carousel" aria-label="Tessellation project images">
+                    <li class="item"><div class="content"><img src="images/tessellation/2.png" alt="Tessellation sketching"></div></li>
+                    <li class="item"><div class="content"><img src="images/tessellation/3.png" alt="Tessellation pattern sketch"></div></li>
+                    <li class="item"><div class="content"><img src="images/tessellation/4.png" alt="Tessellation digitalization"></div></li>
+                    <li class="item"><div class="content"><img src="images/tessellation/5.png" alt="Tessellation 3D print"></div></li>
+                </ul>
+            </article>
+            <!-- Tangram Card -->
+            <article class="project-card">
+                <h3>Tangram Design</h3>
+                <p>This activity took several weeks to complete. The most difficult part was creating the vectorized sketch and preparing the printable model with Blender.</p>
+                <ul class="project-carousel" aria-label="Tessellation project images">
+                    <li class="item"><div class="content"><img src="images/tangram/2.png" alt="Tangram research part 1"></div></li>
+                    <li class="item"><div class="content"><img src="images/tangram/3.png" alt="Tangram research part 2"></div></li>
+                    <li class="item"><div class="content"><img src="images/tangram/4.png" alt="Tangram design process palette"></div></li>
+                    <li class="item"><div class="content"><img src="images/tangram/5.png" alt="Tangram design process palette description"></div></li>
+                    <li class="item"><div class="content"><img src="images/tangram/6.png" alt="Tangram design process choosing acrylic"></div></li>
+                    <li class="item"><div class="content"><img src="images/tangram/7.png" alt="Tangram design process digital sketch"></div></li>
+                    <li class="item"><div class="content"><img src="images/tangram/8.png" alt="Tangram design process silhouette from sketch"></div></li>
+                    <li class="item"><div class="content"><img src="images/tangram/9.png" alt="Tangram design process cutting the acrylic"></div></li>
+                    <li class="item"><div class="content"><img src="images/tangram/10.png" alt="Tangram design process cutting results"></div></li>
+                    <li class="item"><div class="content"><img src="images/tangram/11.png" alt="Tangram design process painting pieces"></div></li>
+                    <li class="item"><div class="content"><img src="images/tangram/12.png" alt="Tangram making the base"></div></li>
+                    <li class="item"><div class="content"><img src="images/tangram/13.png" alt="Tangram final tan pieces"></div></li>
+                    <li class="item"><div class="content"><img src="images/tangram/14.png" alt="Tangram final puzzle"></div></li>
+                </ul>
+            </article>
         </div>
     </section>
     <!-- <section class="contact" id="contact">
@@ -197,7 +235,6 @@
     </footer>
     
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.5/js/lightbox-plus-jquery.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
