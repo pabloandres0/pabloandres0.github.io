@@ -474,14 +474,17 @@ section{
         display: block;
         margin-left: auto;
     }
+    .header::before{
+        backdrop-filter: blur(10px);
+    }
     .navbar{
         position: absolute;
         top: 100%;
         right: 0;
         width: 50%;
         padding: 1rem 3rem;
-        background: rgba(0, 0, 0, 0.3);
-        -webkit-backdrop-filter: blur(10px);
+        background: rgba(0, 0, 0, 0.5);
+        /* -webkit-backdrop-filter: blur(10px); */
         backdrop-filter: blur(10px);
         border-bottom-left-radius: 2rem;
         border-left: 2px solid var(--main-color);
@@ -576,7 +579,7 @@ section{
     margin: auto;
     /* background: conic-gradient(from 0deg, #18528f, #2d5e75, #298777, #0083ca); */
     background: conic-gradient(from 0deg, #18528f, var(--alt-color), var(--main-color), #0083ca);
-    animation: spinBlob 8s linear infinite;
+    animation: spinBlob 6s linear infinite;
 }
 
 @keyframes spinBlob {
