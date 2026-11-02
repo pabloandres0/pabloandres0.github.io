@@ -1,0 +1,139 @@
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 4rem 15%;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+.navbar a {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+    border-bottom: 3px solid transparent;
+}
+.navbar a:hover {
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+}
+
+.gradient-btn{
+    font-size: 1.8rem;
+    padding: 1rem 2rem;
+    border-radius: 3rem;
+    background-color: var(--main-color);
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.15s ease-in-out;
+    color: contrast-color(var(--main-color));
+    border: none;
+    text-wrap: nowrap;
+}
+.gradient-btn:hover {
+    transform: scale(1.1);
+}
+
+#menu-icon{
+    position: relative;
+    width: 3.5rem;
+    height: 3.5rem;
+    color: var(--main-color);
+    display: none;
+    cursor: pointer;
+}
+#menu-icon::before,
+#menu-icon::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0.4rem;
+    border-radius: 0.2rem;
+    background-color: currentColor;
+}
+#menu-icon::before{
+    top: 0.6rem;
+    box-shadow: 0 1.1rem currentColor, 0 2.2rem currentColor;
+}
+#menu-icon::after{
+    display: none;
+}
+#menu-icon.bx-x::before{
+    top: 1.55rem;
+    transform: rotate(45deg);
+    box-shadow: none;
+}
+#menu-icon.bx-x::after{
+    display: block;
+    top: 1.55rem;
+    transform: rotate(-45deg);
+}
+.logo{
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.logo span{
+    display: block;
+    width: 12rem;
+    aspect-ratio: 180 / 92;
+    padding: 0;
+    border-radius: 0;
+    background-image: none;
+    background-color: var(--main-color);
+    -webkit-mask: url("images/logo.svg") center / contain no-repeat;
+    mask: url("images/logo.svg") center / contain no-repeat;
+}
+.logo:hover {
+    transform: scale(1.1);
+}
+span{
+    background: linear-gradient(
+        270deg,
+        var(--main-color) 10%,
+        var(--alt-color) 100%
+    );
+    padding: 3px;
+    border-radius: 1rem;
+}
+
+@media(max-width:1285px){
+    #menu-icon{
+        display: block;
+        margin-left: auto;
+    }
+    .header::before{
+        backdrop-filter: blur(10px);
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 50%;
+        padding: 1rem 3rem;
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(10px);
+        border-bottom-left-radius: 2rem;
+        border-left: 2px solid var(--main-color);
+        border-bottom: 2px solid var(--main-color);
+        display: none;
+    }
+    .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+        color: var(--text-color);
+    }
+    .navbar.active{
+        display: block;
+    }
+    .gradient-btn{
+        display: none;
+    }
+}

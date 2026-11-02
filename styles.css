@@ -25,7 +25,7 @@ body {
     color: var(--text-color);
     overflow-x: hidden;
 }
-.header {
+/* .header {
     position: fixed;
     width: 100%;
     top: 0;
@@ -37,8 +37,8 @@ body {
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
-}
-#menu-icon{
+} */
+/* #menu-icon{
     position: relative;
     width: 3.5rem;
     height: 3.5rem;
@@ -99,7 +99,7 @@ span{
     );
     padding: 3px;
     border-radius: 1rem;
-}
+} */
 grad-wrap{
     background: linear-gradient(
         0deg,
@@ -111,7 +111,7 @@ grad-wrap{
     background-clip: text;
     color: transparent;
 }
-.navbar a {
+/* .navbar a {
     font-size: 1.8rem;
     color: var(--text-color);
     margin-left: 4rem;
@@ -122,18 +122,12 @@ grad-wrap{
 .navbar a:hover {
     color: var(--main-color);
     border-bottom: 3px solid var(--main-color);
-}
-.gradient-btn{
+} */
+/* .gradient-btn{
     font-size: 1.8rem;
     padding: 1rem 2rem;
     border-radius: 3rem;
     background-color: var(--main-color);
-/* 
-    background: linear-gradient(
-        270deg,
-        var(--main-color) 10%,
-        var(--second-grad) 100%
-    ); */
     letter-spacing: 1px;
     cursor: pointer;
     transition: 0.15s ease-in-out;
@@ -143,7 +137,7 @@ grad-wrap{
 }
 .gradient-btn:hover {
     transform: scale(1.1);
-}
+} */
 
 section{
     min-height: 100vh;
@@ -162,6 +156,10 @@ section{
 }
 .home-content,
 .home-img{
+    position: relative;
+    z-index: 1;
+}
+.project-img{
     position: relative;
     z-index: 1;
 }
@@ -488,7 +486,7 @@ section{
     html {
         font-size: 40%;
     }
-    #menu-icon{
+    /* #menu-icon{
         display: block;
         margin-left: auto;
     }
@@ -502,7 +500,6 @@ section{
         width: 50%;
         padding: 1rem 3rem;
         background: rgba(0, 0, 0, 0.5);
-        /* -webkit-backdrop-filter: blur(10px); */
         backdrop-filter: blur(10px);
         border-bottom-left-radius: 2rem;
         border-left: 2px solid var(--main-color);
@@ -520,7 +517,7 @@ section{
     }
     .gradient-btn{
         display: none;
-    }
+    } */
     .home{
         flex-direction: column-reverse;
         margin: 5rem 0;
@@ -531,6 +528,9 @@ section{
         text-align: center;
     }
     .home-img img{
+        width: 56vw;
+    }
+    .project-img img{
         width: 56vw;
     }
     .blob-inner-container{
