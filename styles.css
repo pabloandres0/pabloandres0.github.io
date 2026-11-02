@@ -393,6 +393,20 @@ section{
     border-radius: 2em;
     object-fit: cover;
 }
+.twoimgs{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    padding: 5rem;
+    width: 100%;
+}
+.twoimgs img{
+    max-width: 50%;
+    height: auto;
+    display: block;
+}
 .project-card h3{
     font-size: 4rem;
     margin-bottom: -1rem;
