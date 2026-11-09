@@ -3,101 +3,259 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>final project</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <title>Final Project | Pablo Andrés</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://cdn.boxicons.com/3.0.8/fonts/filled/boxicons-filled.min.css" rel="stylesheet">
     <link href="https://cdn.boxicons.com/3.0.8/fonts/brands/boxicons-brands.min.css" rel="stylesheet">
-
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="final.css">
 </head>
 <body>
     <!-- header section -->
     <header class="header">
-
-        <!-- logo -->
-        <a href="#home" class="logo" aria-label="Pablo Andrés home">
-            <span aria-hidden="true">
+        <a href="index.html#home" class="logo" aria-label="Pablo Andrés home">
+            <span aria-hidden="true"></span>
         </a>
 
-        <i class="bx bx-menu" id="menu-icon"></i>
+        <i class="bx bx-menu" id="menu-icon" role="button" tabindex="0" aria-label="Toggle navigation" aria-expanded="false"></i>
 
-        <nav class="navbar">
+        <nav class="navbar" aria-label="Primary navigation">
             <a href="index.html#home">Home</a>
             <a href="index.html#about">About</a>
             <a href="index.html#services">Skills</a>
             <a href="index.html#projects">Design Class Projects</a>
-            <a href="#">Final Project</a>
-            <!-- <a href="#final-project">Final Project</a> -->
-            <!-- <a href="#contact">Contact Me</a> -->
+            <a href="final.html" aria-current="page">Final Project</a>
         </nav>
 
         <a href="mailto:pabloandres.rdzp@gmail.com">
             <button type="button" class="gradient-btn">Contact Me</button>
         </a>
-
     </header>
 
+    <main id="final-project" class="final-project">
+        <section class="final-intro" aria-labelledby="final-title">
+            <p class="eyebrow">Design class final project</p>
+            <h1 id="final-title">Project development</h1>
+            <p class="final-intro__copy">A timeline of the ideas, interfaces, and decisions behind my final design project.</p>
+        </section>
 
-    <!-- home section -->
-    <section class="home" id="home">
-        <!-- <div class="blob-outer-container">
-            <div class="blob-inner-container">
-                <div class="blob"></div>
+        <!-- Vertical Timeline -->
+        <section class="timeline" aria-label="Final project timeline">
+            <div class="timeline-container">
+                <article class="timeline-entry" id="entry-ui-elements">
+                    <!-- Region 1: Left (Title, Date, Description) -->
+                    <div class="timeline-meta">
+                        <time datetime="2026-11-08" class="timeline-date">08.11.2026.</time>
+                        <h2 class="timeline-title">UI Elements</h2>
+                        <p class="timeline-description">The first interface study translates the game concept into a dialogue box, character status display, and selectable actions. These elements establish the basic structure for player feedback and choices.</p>
+                    </div>
+
+                    <!-- Region 2: Middle (Thick vertical timeline spine with visible entry marker) -->
+                    <div class="timeline-spine-track" aria-hidden="true">
+                        <div class="timeline-spine"></div>
+                        <div class="timeline-marker"></div>
+                    </div>
+
+                    <!-- Region 3: Horizontal connector from the entry toward the content -->
+                    <div class="timeline-connector-track" aria-hidden="true">
+                        <div class="timeline-connector"></div>
+                    </div>
+
+                    <!-- Region 4: Right (Entry content) -->
+                    <div class="timeline-content">
+                        <!-- UI Demo inside bounded game-screen frame -->
+                        <div class="game-frame-container">
+                            <div class="game-frame" role="region" aria-label="Interactive game interface mockup">
+                                <!-- Battle Area -->
+                                <div class="game-battlefield">
+                                    <!-- Player Status Card -->
+                                    <div class="status-card player-status-card" aria-label="Player 1 status">
+                                        <div class="status-level">Lvl 100</div>
+                                        <div class="status-info-row">
+                                            <span class="status-name">Player 1</span>
+                                            <div class="health-bar-container" role="progressbar" aria-label="Player 1 Health" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                                <div class="health-bar-fill player-health-fill" style="width: 100%;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Enemy Status Card -->
+                                    <div class="status-card enemy-status-card" aria-label="Enemy 1 status">
+                                        <div class="status-level">Lvl 100</div>
+                                        <div class="status-info-row">
+                                            <span class="status-name">Enemy 1</span>
+                                            <div class="health-bar-container" role="progressbar" aria-label="Enemy 1 Health" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                                <div class="health-bar-fill enemy-health-fill" style="width: 100%;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Stats Panel -->
+                                    <div class="stats-panel" aria-label="Combat statistics">
+                                        <h3 class="stats-heading">Stats</h3>
+                                        <div class="stat-line">
+                                            <span class="stat-tag">Str</span>
+                                            <div class="stat-cells" aria-label="Strength: 3 out of 4">
+                                                <span class="stat-cell active"></span>
+                                                <span class="stat-cell active"></span>
+                                                <span class="stat-cell active"></span>
+                                                <span class="stat-cell"></span>
+                                            </div>
+                                        </div>
+                                        <div class="stat-line">
+                                            <span class="stat-tag">Spd</span>
+                                            <div class="stat-cells" aria-label="Speed: 4 out of 4">
+                                                <span class="stat-cell active"></span>
+                                                <span class="stat-cell active"></span>
+                                                <span class="stat-cell active"></span>
+                                                <span class="stat-cell active"></span>
+                                            </div>
+                                        </div>
+                                        <div class="stat-line">
+                                            <span class="stat-tag">End</span>
+                                            <div class="stat-cells" aria-label="Endurance: 3 out of 4">
+                                                <span class="stat-cell active"></span>
+                                                <span class="stat-cell active"></span>
+                                                <span class="stat-cell active"></span>
+                                                <span class="stat-cell"></span>
+                                            </div>
+                                        </div>
+                                        <div class="stat-line">
+                                            <span class="stat-tag">Hp</span>
+                                            <div class="stat-cells enemy-stat-cells" aria-label="Enemy HP: 2 out of 4">
+                                                <span class="stat-cell active enemy-hp-seg-1"></span>
+                                                <span class="stat-cell active enemy-hp-seg-2"></span>
+                                                <span class="stat-cell enemy-hp-seg-3"></span>
+                                                <span class="stat-cell enemy-hp-seg-4"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Characters Stage -->
+                                    <div class="battle-characters" aria-hidden="true">
+                                        <!-- Player -->
+                                        <div class="character-box player-char-box">
+                                            <svg viewBox="0 0 160 190" class="char-svg player-svg" xmlns="http://www.w3.org/2000/svg">
+                                                <g class="pedestal-group">
+                                                    <ellipse cx="80" cy="162" rx="64" ry="20" fill="#555555" stroke="#161a22" stroke-width="4.5" />
+                                                    <ellipse cx="80" cy="154" rx="64" ry="20" fill="#dedede" stroke="#161a22" stroke-width="4.5" />
+                                                    <ellipse cx="80" cy="152" rx="54" ry="15" fill="#8d8d8d" stroke="#161a22" stroke-width="3" />
+                                                    <line x1="44" y1="156" x2="52" y2="167" stroke="#161a22" stroke-width="3.5" />
+                                                    <line x1="72" y1="160" x2="80" y2="171" stroke="#161a22" stroke-width="3.5" />
+                                                    <line x1="100" y1="160" x2="108" y2="171" stroke="#161a22" stroke-width="3.5" />
+                                                    <line x1="122" y1="154" x2="128" y2="163" stroke="#161a22" stroke-width="3.5" />
+                                                </g>
+                                                <g class="fighter-player" stroke="#161a22" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none">
+                                                    <circle cx="86" cy="38" r="16" fill="#ffffff" />
+                                                    <path d="M 82 54 L 72 96" />
+                                                    <path d="M 72 96 L 58 126 L 46 146 L 60 147" />
+                                                    <path d="M 72 96 L 84 122 L 96 147 L 110 147" />
+                                                    <path d="M 78 64 L 60 84 L 66 98" />
+                                                    <path d="M 80 64 L 102 76 L 114 66" />
+                                                    <circle cx="116" cy="64" r="5" fill="#ffffff" stroke="#161a22" stroke-width="4" />
+                                                </g>
+                                            </svg>
+                                        </div>
+
+                                        <!-- Enemy -->
+                                        <div class="character-box enemy-char-box">
+                                            <svg viewBox="0 0 160 190" class="char-svg enemy-svg" xmlns="http://www.w3.org/2000/svg">
+                                                <g class="pedestal-group">
+                                                    <ellipse cx="80" cy="162" rx="60" ry="19" fill="#555555" stroke="#161a22" stroke-width="4.5" />
+                                                    <ellipse cx="80" cy="154" rx="60" ry="19" fill="#dedede" stroke="#161a22" stroke-width="4.5" />
+                                                    <ellipse cx="80" cy="152" rx="50" ry="14" fill="#8d8d8d" stroke="#161a22" stroke-width="3" />
+                                                    <line x1="48" y1="157" x2="54" y2="166" stroke="#161a22" stroke-width="3.5" />
+                                                    <line x1="74" y1="160" x2="80" y2="170" stroke="#161a22" stroke-width="3.5" />
+                                                    <line x1="102" y1="159" x2="108" y2="168" stroke="#161a22" stroke-width="3.5" />
+                                                </g>
+                                                <g class="fighter-enemy" stroke="#161a22" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none">
+                                                    <circle cx="70" cy="36" r="15" fill="#ffffff" />
+                                                    <path d="M 72 51 L 84 88" />
+                                                    <path d="M 84 88 L 76 118 L 66 144 L 54 144" />
+                                                    <path d="M 84 88 L 96 116 L 102 143 L 114 143" />
+                                                    <path d="M 75 60 L 64 76 L 66 90" />
+                                                    <path d="M 77 60 L 92 72 L 90 92" />
+                                                </g>
+                                            </svg>
+                                        </div>
+                                    </div>
+
+                                    <!-- Action Controls Panel -->
+                                    <div class="action-panel" aria-label="Combat Actions">
+                                        <div class="action-buttons-grid">
+                                            <button type="button" class="combat-btn" data-action="punch">PUNCH</button>
+                                            <button type="button" class="combat-btn" data-action="kick">Kick</button>
+                                            <button type="button" class="combat-btn" data-action="heal">Heal</button>
+                                            <button type="button" class="combat-btn" data-action="charge">Charge</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Bottom Area: Dialogue Box & Options Box -->
+                                <div class="game-dialogue-area">
+                                    <!-- Dialogue Box -->
+                                    <div class="dialogue-panel" aria-labelledby="dialogue-name">
+                                        <div class="dialogue-portrait" aria-hidden="true">
+                                            <svg viewBox="0 0 76 76" class="portrait-svg" xmlns="http://www.w3.org/2000/svg">
+                                                <rect width="76" height="76" rx="12" fill="#1b4965" stroke="#0d2838" stroke-width="3" />
+                                                <circle cx="38" cy="28" r="15" fill="#ffffff" />
+                                                <path d="M 16 72 C 16 50 26 47 38 47 C 50 47 60 50 60 72 Z" fill="#ffffff" />
+                                            </svg>
+                                        </div>
+                                        <div class="dialogue-content">
+                                            <div id="dialogue-name" class="dialogue-speaker">EXAMPLE CHARACTER</div>
+                                            <p id="dialogue-text" class="dialogue-speech">Hello, this is a dialogue example… The quick brown fox jumps over the lazy dog.</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Options Box -->
+                                    <div class="options-panel" aria-label="Dialogue options">
+                                        <button type="button" class="choice-btn active" data-choice="hi" aria-pressed="true">
+                                            <span class="choice-indicator"><span class="choice-indicator-inner"></span></span>
+                                            <span class="choice-label">Say “Hi”</span>
+                                        </button>
+                                        <button type="button" class="choice-btn" data-choice="bye" aria-pressed="false">
+                                            <span class="choice-indicator"><span class="choice-indicator-inner"></span></span>
+                                            <span class="choice-label">Say “Bye”</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Explanatory description below the frame -->
+                        <p class="ui-description">The battle screen organizes player and enemy status, statistics, characters, and actions. The dialogue panel then gives the character a visual identity and a clear speaking area, while the options panel separates player choices into two simple, readable controls.</p>
+                    </div>
+                </article>
             </div>
-        </div> -->
-
-        <div class="home-content">
-            <h1>*Placeholder*</h1>
-            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere eveniet quo adipisci ea saepe, illo in illum cumque inventore. Iste provident, exercitationem eum alias nemo delectus labore ducimus. Dignissimos, doloremque!</h3>
-        </div>
-        <div class="project-img">
-            <img src="https://github.com/pabloandres0.png?size=512" alt="Pablo Andrés GitHub profile picture">
-        </div>
-    </section>
-    
+        </section>
+    </main>
 
     <footer class="footer">
         <div class="social-icons">
-            <a target="_blank" href="https://github.com/pabloandres0">
+            <a target="_blank" rel="noreferrer" href="https://github.com/pabloandres0" aria-label="GitHub">
                 <i class="bxl bx-github"></i>
             </a>
-            <a target="_blank" href="https://instagram.com/pabloandr.es">
+            <a target="_blank" rel="noreferrer" href="https://instagram.com/pabloandr.es" aria-label="Instagram">
                 <i class="bxl bx-instagram-alt"></i>
             </a>
         </div>
 
         <ul class="list">
-            <li>
-                <a href="#home">Home</a>
-            </li>
-            <li>
-                <a href="#about">About Me</a>
-            </li>
-            <li>
-                <a href="#services">Skills</a>
-            </li>
-
-            <li>
-                <a href="#projects">Design Class Projects</a>
-            </li>
-            <li>
-                <a href="final.html">Final Project</a>
-            </li>
-            <!-- <li>
-                <a href="#final-project">Final Project</a>
-            </li> -->
-            <!-- <li>
-                <a href="#contact">Contact</a>
-            </li> -->
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#about">About Me</a></li>
+            <li><a href="index.html#services">Skills</a></li>
+            <li><a href="index.html#projects">Design Class Projects</a></li>
+            <li><a href="final.html">Final Project</a></li>
         </ul>
 
-        <p class="copyright">
-            © Pablo Andrés | All Rights Reserved
-        </p>
+        <p class="copyright">© Pablo Andrés | All Rights Reserved</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

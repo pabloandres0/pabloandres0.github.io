@@ -1,0 +1,744 @@
+/* ==========================================================================
+   Final Project Stylesheet (final.css)
+   Scoped specifically to final.html
+   ========================================================================== */
+
+/* Reset generic section and span defaults from styles.css & header.css inside final project */
+.final-project section {
+    min-height: auto;
+    padding: 0;
+}
+
+.final-project span {
+    background: none;
+    padding: 0;
+    border-radius: 0;
+}
+
+/* Active navigation highlight for Final Project link */
+.navbar a[aria-current="page"] {
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+}
+
+/* Main Container */
+.final-project {
+    min-height: 100vh;
+    padding: 14rem 6% 8rem;
+    background: var(--bg-color);
+    overflow-x: hidden;
+}
+
+/* Intro Section */
+.final-intro {
+    min-height: auto;
+    padding: 0;
+    max-width: 86rem;
+    margin: 0 auto 4.5rem;
+    text-align: center;
+}
+
+.eyebrow {
+    color: var(--main-color);
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.final-intro h1 {
+    margin: 1rem 0 1.5rem;
+    font-size: clamp(4.2rem, 6.5vw, 6.5rem);
+    line-height: 1.1;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.final-intro__copy {
+    color: #c9d0dc;
+    font-size: 1.9rem;
+    line-height: 1.6;
+    max-width: 68rem;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   Vertical Timeline Structure
+   Four clearly separated desktop regions:
+   1. Left: Title, Date, Description
+   2. Middle: Vertical Spine with Visible Marker
+   3. Horizontal Connector
+   4. Right: Entry Content (Mockup Frame & Notes)
+   ========================================================================== */
+
+.timeline {
+    min-height: auto;
+    padding: 0;
+    width: 100%;
+    max-width: 88rem;
+    margin: 0 auto;
+    position: relative;
+}
+
+.timeline-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+    position: relative;
+}
+
+.timeline-entry {
+    display: grid;
+    grid-template-columns: 21rem 3.2rem 3.8rem minmax(0, 1fr);
+    column-gap: 0;
+    align-items: start;
+    position: relative;
+}
+
+/* Region 1: Left Meta */
+.timeline-meta {
+    grid-column: 1;
+    text-align: right;
+    padding-right: 2.8rem;
+}
+
+.timeline-date {
+    display: block;
+    color: var(--main-color);
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin-bottom: 0.6rem;
+}
+
+.timeline-title {
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.2;
+    margin-bottom: 1.4rem;
+}
+
+.timeline-description {
+    color: #c0cad8;
+    font-size: 1.55rem;
+    line-height: 1.65;
+}
+
+/* Region 2: Middle Spine & Marker */
+.timeline-spine-track {
+    grid-column: 2;
+    position: relative;
+    height: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.timeline-spine {
+    position: absolute;
+    top: -4rem;
+    bottom: -8rem;
+    width: 0.8rem;
+    background-color: var(--main-color);
+    border-radius: 0.4rem;
+}
+
+/* Downward arrow at the bottom of the last timeline entry */
+.timeline-entry:last-child .timeline-spine::after {
+    content: "";
+    position: absolute;
+    bottom: -2.2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 1.4rem solid transparent;
+    border-right: 1.4rem solid transparent;
+    border-top: 2.4rem solid var(--main-color);
+}
+
+.timeline-marker {
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    border: 0.5rem solid var(--bg-color);
+    z-index: 3;
+    box-shadow: 0 0 1.4rem rgba(106, 241, 223, 0.5);
+}
+
+/* Region 3: Horizontal Connector */
+.timeline-connector-track {
+    grid-column: 3;
+    position: relative;
+    height: 100%;
+}
+
+.timeline-connector {
+    position: absolute;
+    top: calc(1rem + 1.4rem - 0.25rem);
+    left: 0;
+    right: 0;
+    height: 0.5rem;
+    background-color: var(--main-color);
+}
+
+/* Region 4: Right Content Column */
+.timeline-content {
+    grid-column: 4;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2.2rem;
+}
+
+/* ==========================================================================
+   Interactive Game Screen Mockup Frame
+   Faithful monochrome hand-drawn reproduction of the Sketch project
+   Using container query inline (cqi) & % layout to ensure perfect scaling
+   at all zoom levels and viewports without internal element overlap.
+   ========================================================================== */
+
+.game-frame-container {
+    width: 100%;
+    max-width: 96rem;
+    container-type: inline-size;
+}
+
+.game-frame {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    background: #ffffff;
+    border: clamp(0.25rem, 0.45cqi, 0.4rem) solid #161a22;
+    border-radius: clamp(1rem, 2cqi, 1.8rem);
+    box-shadow: 0 1.6rem 4rem rgba(0, 0, 0, 0.5), 0 0.3rem 0 #161a22;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    padding: 2.2cqi;
+    user-select: none;
+    box-sizing: border-box;
+}
+
+/* Upper Battlefield Area */
+.game-battlefield {
+    flex: 1;
+    min-height: 0;
+    position: relative;
+}
+
+/* Status Cards (Player & Enemy) */
+.status-card {
+    position: absolute;
+    top: 0;
+    padding: 1cqi 1.4cqi;
+    border: clamp(0.18rem, 0.32cqi, 0.28rem) solid #161a22;
+    border-radius: clamp(0.5rem, 1cqi, 1rem);
+    background: #ffffff;
+    box-shadow: 0.2cqi 0.2cqi 0 #161a22;
+    color: #161a22;
+    z-index: 5;
+    box-sizing: border-box;
+}
+
+.player-status-card {
+    left: 0;
+    width: 28%;
+}
+
+.enemy-status-card {
+    left: 30.5%;
+    width: 28%;
+}
+
+.status-level {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: clamp(0.85rem, 2.1cqi, 1.6rem);
+    color: #161a22;
+    line-height: 1.15;
+    margin-bottom: 0.3cqi;
+}
+
+.status-info-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.8cqi;
+}
+
+.status-name {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: clamp(0.75rem, 1.8cqi, 1.35rem);
+    color: #161a22;
+    white-space: nowrap;
+}
+
+.health-bar-container {
+    flex: 1;
+    height: clamp(0.6rem, 1.6cqi, 1.3rem);
+    border: clamp(0.14rem, 0.28cqi, 0.24rem) solid #161a22;
+    border-radius: 0.3cqi;
+    background: #ffffff;
+    overflow: hidden;
+    position: relative;
+}
+
+.health-bar-fill {
+    height: 100%;
+    background: #383e4a;
+    transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.25s ease;
+}
+
+/* Stats Panel (Top-Right) */
+.stats-panel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 37%;
+    padding: 1cqi 1.4cqi;
+    border: clamp(0.18rem, 0.32cqi, 0.28rem) solid #161a22;
+    border-radius: clamp(0.6rem, 1.2cqi, 1.2rem);
+    background: #ffffff;
+    box-shadow: 0.2cqi 0.2cqi 0 #161a22;
+    z-index: 5;
+    box-sizing: border-box;
+}
+
+.stats-heading {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: clamp(0.95rem, 2.4cqi, 1.9rem);
+    color: #161a22;
+    text-align: center;
+    line-height: 1.15;
+    margin-bottom: 0.5cqi;
+}
+
+.stat-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.4cqi;
+    gap: 0.8cqi;
+}
+
+.stat-line:last-child {
+    margin-bottom: 0;
+}
+
+.stat-tag {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: clamp(0.75rem, 1.8cqi, 1.3rem);
+    color: #161a22;
+    width: 2.8cqi;
+    min-width: 2rem;
+}
+
+.stat-cells {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    flex: 1;
+    height: clamp(0.6rem, 1.6cqi, 1.3rem);
+    border: clamp(0.14rem, 0.28cqi, 0.24rem) solid #161a22;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.stat-cell {
+    border-right: clamp(0.12rem, 0.22cqi, 0.2rem) solid #161a22;
+    background: #ffffff;
+    transition: background-color 0.25s ease;
+}
+
+.stat-cell:last-child {
+    border-right: none;
+}
+
+.stat-cell.active {
+    background: #383e4a;
+}
+
+/* Battle Characters & Pedestals */
+.battle-characters {
+    position: absolute;
+    top: 17%;
+    bottom: 26%;
+    left: 0;
+    right: 38%;
+    pointer-events: none;
+}
+
+.character-box {
+    position: absolute;
+    bottom: 0;
+    width: 46%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.player-char-box {
+    left: 2%;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.enemy-char-box {
+    left: 50%;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.char-svg {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    display: block;
+}
+
+/* Character Dynamic Feedback States */
+.enemy-char-box.hit {
+    animation: hitShake 0.35s ease;
+}
+
+.player-char-box.healing {
+    animation: healPulse 0.5s ease;
+}
+
+.player-char-box.charged {
+    animation: chargeGlow 1.2s infinite alternate ease-in-out;
+}
+
+/* Action Controls Panel */
+.action-panel {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30%;
+    padding: 0.8cqi;
+    border: clamp(0.18rem, 0.32cqi, 0.28rem) solid #161a22;
+    border-radius: clamp(0.5rem, 1cqi, 1rem);
+    background: #ffffff;
+    box-shadow: 0.2cqi 0.2cqi 0 #161a22;
+    z-index: 5;
+    box-sizing: border-box;
+}
+
+.action-buttons-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6cqi;
+}
+
+.combat-btn {
+    padding: 0.5cqi 0.8cqi;
+    border: clamp(0.14rem, 0.25cqi, 0.22rem) solid #161a22;
+    border-radius: clamp(0.3rem, 0.6cqi, 0.6rem);
+    background: #ffffff;
+    color: #161a22;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: clamp(0.65rem, 1.7cqi, 1.3rem);
+    cursor: pointer;
+    transition: transform 0.15s ease, background-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.combat-btn:hover {
+    transform: translateY(-2px);
+    background: #161a22;
+    color: #ffffff;
+    box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.2);
+}
+
+.combat-btn:active {
+    transform: translateY(0);
+}
+
+.combat-btn[data-action="charge"].active {
+    background: #e0f2fe;
+    border-color: #0284c7;
+    color: #0369a1;
+    box-shadow: 0 0 1rem rgba(14, 165, 233, 0.5);
+    animation: chargeButtonPulse 1s infinite alternate;
+}
+
+/* Bottom Dialogue & Options Section */
+.game-dialogue-area {
+    display: flex;
+    gap: 1.4cqi;
+    margin-top: 1.4cqi;
+    z-index: 6;
+}
+
+/* Dialogue Box */
+.dialogue-panel {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    gap: 1.4cqi;
+    padding: 1cqi 1.4cqi;
+    border: clamp(0.18rem, 0.32cqi, 0.28rem) solid #9aa0a6;
+    border-radius: clamp(0.6rem, 1.2cqi, 1.4rem);
+    background: #dedede;
+    box-shadow: 0.2cqi 0.2cqi 0 #9aa0a6;
+    box-sizing: border-box;
+}
+
+.dialogue-portrait {
+    width: 9cqi;
+    aspect-ratio: 1;
+    flex-shrink: 0;
+}
+
+.portrait-svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: clamp(0.4rem, 0.8cqi, 1rem);
+    box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.15);
+}
+
+.dialogue-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.dialogue-speaker {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: clamp(0.75rem, 1.8cqi, 1.4rem);
+    color: #161a22;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 0.3cqi;
+    border-bottom: 1.5px solid #161a22;
+    display: inline-block;
+}
+
+.dialogue-speech {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(0.7rem, 1.65cqi, 1.3rem);
+    color: #161a22;
+    line-height: 1.3;
+    margin: 0;
+    transition: opacity 0.2s ease;
+}
+
+/* Options Box */
+.options-panel {
+    width: 27%;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.8cqi;
+    padding: 1cqi 1.2cqi;
+    border: clamp(0.18rem, 0.32cqi, 0.28rem) solid #9aa0a6;
+    border-radius: clamp(0.6rem, 1.2cqi, 1.4rem);
+    background: #dedede;
+    box-shadow: 0.2cqi 0.2cqi 0 #9aa0a6;
+    box-sizing: border-box;
+}
+
+.choice-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.8cqi;
+    padding: 0.4cqi 0.7cqi;
+    border: clamp(0.12rem, 0.2cqi, 0.2rem) solid transparent;
+    border-radius: 0.5cqi;
+    background: transparent;
+    cursor: pointer;
+    transition: background-color 0.15s ease, transform 0.15s ease;
+}
+
+.choice-btn:hover {
+    background: rgba(0, 0, 0, 0.06);
+    transform: translateX(3px);
+}
+
+.choice-indicator {
+    width: 2.4cqi;
+    height: 2.4cqi;
+    min-width: 1.2rem;
+    min-height: 1.2rem;
+    border-radius: 50%;
+    border: clamp(0.14rem, 0.25cqi, 0.22rem) solid #555555;
+    background: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.choice-indicator-inner {
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    background: transparent;
+    transition: background-color 0.15s ease;
+}
+
+.choice-btn.active .choice-indicator-inner {
+    background: #161a22;
+}
+
+.choice-label {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(0.8rem, 1.85cqi, 1.45rem);
+    font-weight: 500;
+    color: #161a22;
+    white-space: nowrap;
+}
+
+/* Explanatory description below the frame */
+.ui-description {
+    color: #c0cad8;
+    font-size: 1.6rem;
+    line-height: 1.65;
+    max-width: 90rem;
+}
+
+/* Keyframe Animations */
+@keyframes hitShake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-8px); filter: brightness(1.4); }
+    40%, 80% { transform: translateX(8px); filter: brightness(0.8); }
+}
+
+@keyframes healPulse {
+    0% { filter: drop-shadow(0 0 0 rgba(74, 222, 128, 0)); }
+    50% { filter: drop-shadow(0 0 1.8rem rgba(74, 222, 128, 0.95)); }
+    100% { filter: drop-shadow(0 0 0 rgba(74, 222, 128, 0)); }
+}
+
+@keyframes chargeGlow {
+    0% { filter: drop-shadow(0 0 0.5rem #6af1df); }
+    100% { filter: drop-shadow(0 0 2rem #6af1df); }
+}
+
+@keyframes chargeButtonPulse {
+    0% { box-shadow: 0 0 0.5rem rgba(14, 165, 233, 0.4); }
+    100% { box-shadow: 0 0 1.4rem rgba(14, 165, 233, 0.8); }
+}
+
+/* ==========================================================================
+   Responsive Breakpoints & Zoom Layout Safety
+   Ensures zero overlap between spine and text at 75%, 100%, zoom, and mobile.
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+    .final-project {
+        padding-inline: 4%;
+    }
+
+    .timeline-entry {
+        grid-template-columns: minmax(18rem, 24rem) 3.2rem 3.6rem minmax(0, 1fr);
+    }
+
+    .timeline-meta {
+        padding-right: 2rem;
+    }
+}
+
+@media (max-width: 860px) {
+    .timeline-entry {
+        grid-template-columns: 3.2rem 2.4rem minmax(0, 1fr);
+        grid-template-rows: auto auto;
+    }
+
+    /* Spine runs continuously in column 1 */
+    .timeline-spine-track {
+        grid-column: 1;
+        grid-row: 1 / 3;
+    }
+
+    .timeline-spine {
+        top: 0;
+        bottom: -5rem;
+        width: 0.6rem;
+    }
+
+    .timeline-marker {
+        top: 0.5rem;
+        width: 2.2rem;
+        height: 2.2rem;
+        border-width: 0.4rem;
+    }
+
+    /* Horizontal connector from spine to meta header */
+    .timeline-connector-track {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .timeline-connector {
+        top: calc(0.5rem + 1.1rem - 0.2rem);
+        height: 0.4rem;
+    }
+
+    /* Meta in column 3, row 1 */
+    .timeline-meta {
+        grid-column: 3;
+        grid-row: 1;
+        text-align: left;
+        padding-right: 0;
+        margin-bottom: 2.5rem;
+    }
+
+    /* Content in column 3, row 2 */
+    .timeline-content {
+        grid-column: 3;
+        grid-row: 2;
+    }
+}
+
+@media (max-width: 580px) {
+    .final-project {
+        padding-top: 13rem;
+        padding-inline: 3%;
+    }
+
+    .timeline-entry {
+        grid-template-columns: 2.2rem 1.2rem minmax(0, 1fr);
+    }
+
+    .timeline-spine {
+        width: 0.5rem;
+    }
+
+    .timeline-marker {
+        width: 1.8rem;
+        height: 1.8rem;
+        border-width: 0.3rem;
+    }
+
+    .timeline-connector {
+        top: calc(0.5rem + 0.9rem - 0.15rem);
+        height: 0.3rem;
+    }
+
+    .timeline-meta .timeline-title {
+        font-size: 2.4rem;
+    }
+
+    .timeline-description,
+    .ui-description {
+        font-size: 1.45rem;
+    }
+}

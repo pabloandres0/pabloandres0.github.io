@@ -1,0 +1,1069 @@
+.final-project {
+    min-height: 100vh;
+    padding: 18rem 8% 10rem;
+    background: var(--bg-color);
+}
+
+.final-intro {
+    max-width: 90rem;
+    margin: 0 auto 10rem;
+    text-align: center;
+}
+
+.eyebrow {
+    color: var(--main-color);
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.final-intro h1 {
+    margin: 1rem 0 1.5rem;
+    font-size: clamp(4.5rem, 8vw, 8rem);
+    line-height: 1.1;
+}
+
+.final-intro__copy {
+    color: #c9d0dc;
+    font-size: 2rem;
+}
+
+.timeline {
+    position: relative;
+    max-width: 140rem;
+    margin: 0 auto;
+}
+
+.timeline::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 23rem;
+    width: 0.3rem;
+    background: var(--main-color);
+    content: "";
+}
+
+.timeline::after {
+    position: absolute;
+    bottom: -1.5rem;
+    left: calc(23rem - 1.1rem);
+    width: 0;
+    height: 0;
+    border-top: 2rem solid var(--main-color);
+    border-right: 1.1rem solid transparent;
+    border-left: 1.1rem solid transparent;
+    content: "";
+}
+
+.timeline-entry {
+    position: relative;
+    display: grid;
+    grid-template-columns: 19rem minmax(0, 1fr);
+    column-gap: 8rem;
+}
+
+.timeline-marker {
+    position: absolute;
+    top: 0.8rem;
+    left: 21.95rem;
+    z-index: 1;
+    width: 2.4rem;
+    height: 2.4rem;
+    border: 0.5rem solid var(--bg-color);
+    border-radius: 50%;
+    background: var(--main-color);
+}
+
+.timeline-meta {
+    text-align: right;
+}
+
+.timeline-meta time {
+    display: block;
+    color: var(--main-color);
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.timeline-meta h2 {
+    margin-top: 0.8rem;
+    font-size: 3rem;
+    line-height: 1.2;
+}
+
+.timeline-content {
+    min-width: 0;
+}
+
+.timeline-description,
+.ui-description {
+    color: #d6dbe5;
+    font-size: 1.8rem;
+    line-height: 1.7;
+}
+
+.game-ui {
+    display: grid;
+    gap: 2.5rem;
+    align-items: stretch;
+    margin: 4rem 0 2.5rem;
+    padding: 3rem;
+    border: 0.2rem solid #657084;
+    border-radius: 1.8rem;
+    background: #070a12;
+}
+
+.battle-ui {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 20rem;
+    grid-template-rows: auto minmax(18rem, 1fr) auto;
+    gap: 2rem;
+    min-height: 48rem;
+    padding: 2rem;
+    overflow: hidden;
+    border: 0.2rem solid #657084;
+    border-radius: 1.4rem;
+    background:
+        radial-gradient(circle at 50% 45%, #253b4d 0, #12202c 28%, #101723 70%);
+}
+
+.status-card {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.5rem 1rem;
+    align-items: center;
+    min-width: 20rem;
+    padding: 1rem 1.5rem;
+    border: 0.2rem solid #b9c5d1;
+    border-radius: 0.9rem;
+    background: #182332;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+
+.status-card strong {
+    grid-column: 1 / -1;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+
+.status-card span {
+    padding: 0;
+    background: none;
+    font-size: 1.6rem;
+}
+
+.status-card i {
+    display: block;
+    width: 100%;
+    height: 1rem;
+    border: 0.2rem solid #b9c5d1;
+    background: linear-gradient(90deg, var(--main-color) 85%, transparent 85%);
+}
+
+.enemy-status {
+    grid-column: 2;
+}
+
+.battle-character {
+    position: relative;
+    align-self: end;
+    justify-self: center;
+    width: 12rem;
+    height: 20rem;
+    border-radius: 50% 50% 2rem 2rem;
+    background: #d7e5ed;
+    transform: skew(-8deg);
+}
+
+.battle-character .battle-head {
+    position: absolute;
+    top: -5rem;
+    left: 3rem;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    background: #e6f4f4;
+}
+
+.battle-character .battle-body {
+    position: absolute;
+    bottom: -1.5rem;
+    left: 1rem;
+    width: 4rem;
+    height: 7rem;
+    border-radius: 50%;
+    background: #d7e5ed;
+    box-shadow: 6rem 0 #d7e5ed;
+}
+
+.player-character {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.enemy-character {
+    grid-column: 2;
+    grid-row: 2;
+    transform: scale(0.8) skew(8deg);
+}
+
+.stats-panel {
+    grid-column: 3;
+    grid-row: 1 / 3;
+    padding: 2rem 1.5rem;
+    border: 0.2rem solid #b9c5d1;
+    border-radius: 1.2rem;
+    background: #182332;
+}
+
+.stats-panel h3 {
+    margin-bottom: 1rem;
+    color: var(--text-color);
+    font-size: 2.2rem;
+    text-align: center;
+}
+
+.stats-panel p {
+    display: grid;
+    grid-template-columns: 4rem 1fr;
+    gap: 0.5rem;
+    align-items: center;
+    margin: 1.5rem 0;
+    color: var(--text-color);
+    font-size: 1.5rem;
+}
+
+.stats-panel p > i {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: 2rem;
+    border: 0.2rem solid #b9c5d1;
+}
+
+.stats-panel p > i b {
+    border-right: 0.2rem solid #b9c5d1;
+    background: var(--main-color);
+}
+
+.stats-panel p > i b:last-child {
+    border-right: 0;
+    background: transparent;
+}
+
+.action-panel {
+    grid-column: 1 / 3;
+    grid-row: 3;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding: 1.5rem;
+    border: 0.2rem solid #b9c5d1;
+    border-radius: 1.2rem;
+    background: #182332;
+}
+
+.action-panel button {
+    padding: 1rem;
+    border: 0.2rem solid #b9c5d1;
+    border-radius: 0.7rem;
+    background: transparent;
+    color: var(--text-color);
+    cursor: pointer;
+    font: inherit;
+    font-size: 1.6rem;
+}
+
+.action-panel button:hover,
+.action-panel button:focus-visible {
+    border-color: var(--main-color);
+    color: var(--main-color);
+}
+
+.dialogue-box,
+.options-box {
+    border: 0.2rem solid var(--main-color);
+    border-radius: 1.4rem;
+    background: #161d2e;
+}
+
+.dialogue-box {
+    display: grid;
+    grid-template-columns: minmax(14rem, 30%) 1fr;
+    min-height: 28rem;
+    overflow: hidden;
+}
+
+.character-panel {
+    display: grid;
+    place-items: center;
+    min-height: 22rem;
+    background: linear-gradient(145deg, #176b72, #0d334b);
+}
+
+.character-art {
+    position: relative;
+    width: 13rem;
+    height: 18rem;
+}
+
+.character-head {
+    position: absolute;
+    top: 0;
+    left: 3.8rem;
+    width: 6rem;
+    height: 6rem;
+    border: 0.3rem solid #d6f7ed;
+    border-radius: 50%;
+    background: #6af1df;
+}
+
+.character-body {
+    position: absolute;
+    bottom: 0;
+    left: 1.2rem;
+    width: 10.6rem;
+    height: 12rem;
+    border: 0.3rem solid #d6f7ed;
+    border-radius: 50% 50% 1.5rem 1.5rem;
+    background: #6af1df;
+    transform: skew(-8deg);
+}
+
+.dialogue-copy {
+    padding: 3rem;
+}
+
+.dialogue-copy h3,
+.dialogue-copy p {
+    font-size: clamp(1.7rem, 2.2vw, 2.6rem);
+    line-height: 1.5;
+}
+
+.dialogue-copy h3 {
+    margin-bottom: 1.5rem;
+    color: var(--main-color);
+}
+
+.dialogue-copy p {
+    color: var(--text-color);
+}
+
+.options-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    padding: 3rem;
+}
+
+.options-box button {
+    padding: 1.3rem 1.5rem;
+    border: 0.2rem solid var(--main-color);
+    border-radius: 0.8rem;
+    background: transparent;
+    color: var(--text-color);
+    cursor: pointer;
+    font: inherit;
+    font-size: 1.8rem;
+    text-align: left;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.options-box button:hover,
+.options-box button:focus-visible {
+    background: var(--main-color);
+    color: #071014;
+}
+
+.ui-description {
+    color: #aeb8c9;
+    font-size: 1.6rem;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+@media (max-width: 900px) {
+    .final-project {
+        padding-inline: 5%;
+    }
+
+    .timeline::before {
+        left: 1.1rem;
+    }
+
+    .timeline::after {
+        left: 0;
+    }
+
+    .timeline-entry {
+        display: block;
+        padding-left: 4rem;
+    }
+
+    .timeline-marker {
+        left: 0;
+    }
+
+    .timeline-meta {
+        margin-bottom: 2rem;
+        text-align: left;
+    }
+
+    .game-ui {
+        grid-template-columns: 1fr;
+    }
+
+    .battle-ui {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .stats-panel {
+        grid-column: 1 / -1;
+        grid-row: 3;
+    }
+
+    .action-panel {
+        grid-column: 1 / -1;
+        grid-row: 4;
+    }
+}
+
+@media (max-width: 560px) {
+    .final-project {
+        padding-top: 14rem;
+    }
+
+    .final-intro {
+        margin-bottom: 6rem;
+    }
+
+    .final-intro__copy,
+    .timeline-description {
+        font-size: 1.6rem;
+    }
+
+    .game-ui {
+        padding: 1.5rem;
+    }
+
+    .battle-ui {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        min-height: auto;
+    }
+
+    .enemy-status,
+    .player-character,
+    .enemy-character,
+    .stats-panel,
+    .action-panel {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    .player-character,
+    .enemy-character {
+        display: none;
+    }
+
+    .dialogue-box {
+        grid-template-columns: 1fr;
+    }
+
+    .character-panel {
+        min-height: 16rem;
+    }
+
+    .dialogue-copy,
+    .options-box {
+        padding: 2rem;
+    }
+}
+
+/* Timeline and prototype layout */
+.timeline {
+    max-width: 160rem;
+}
+
+.timeline::before {
+    top: 0;
+    bottom: 0;
+    left: 27rem;
+    width: 0.6rem;
+    border-radius: 1rem;
+}
+
+.timeline::after {
+    bottom: -2.8rem;
+    left: calc(27rem - 1.8rem);
+    border-top-width: 3rem;
+    border-right-width: 1.8rem;
+    border-left-width: 1.8rem;
+}
+
+.timeline-entry {
+    grid-template-columns: minmax(18rem, 24rem) 6rem minmax(0, 1fr);
+    column-gap: 0;
+}
+
+.timeline-marker {
+    position: static;
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: center;
+    width: 2.8rem;
+    height: 2.8rem;
+    margin-top: 0.5rem;
+    border-width: 0.6rem;
+}
+
+.timeline-meta {
+    grid-column: 1;
+    padding-right: 3rem;
+    text-align: right;
+}
+
+.timeline-meta .timeline-description {
+    margin-top: 2rem;
+    color: #b9c3d1;
+    font-size: 1.55rem;
+}
+
+.timeline-content {
+    grid-column: 3;
+    position: relative;
+    padding-left: 3rem;
+}
+
+.timeline-content::before {
+    position: absolute;
+    top: 1.9rem;
+    left: 0;
+    width: 3rem;
+    height: 0.4rem;
+    background: var(--main-color);
+    content: "";
+}
+
+.game-ui {
+    grid-template-columns: 1fr 1fr;
+    border-color: #111;
+    border-radius: 0.8rem;
+    background: #d7d7d7;
+    box-shadow: 0.8rem 0.8rem 0 #111;
+}
+
+.battle-ui {
+    grid-column: 1 / -1;
+    min-height: clamp(42rem, 45vw, 66rem);
+    border: 0.35rem solid #111;
+    border-radius: 1.2rem;
+    background: #f7f7f4;
+    color: #111;
+}
+
+.status-card,
+.stats-panel,
+.action-panel {
+    border: 0.3rem solid #111;
+    border-radius: 1.2rem;
+    background: #fff;
+    color: #111;
+    box-shadow: 0.3rem 0.3rem 0 #111;
+}
+
+.status-card strong,
+.status-card span,
+.stats-panel h3,
+.stats-panel p {
+    color: #111;
+}
+
+.status-card i {
+    position: relative;
+    overflow: hidden;
+    border-color: #111;
+    background: #fff;
+}
+
+.status-card i::after {
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: var(--health, 100%);
+    background: #555;
+    content: "";
+}
+
+.battle-character {
+    border: 0.35rem solid #111;
+    background: #fff;
+    box-shadow: 0.4rem 0.4rem 0 #111;
+}
+
+.battle-character .battle-head,
+.battle-character .battle-body {
+    border: 0.3rem solid #111;
+    background: #fff;
+}
+
+.battle-character .battle-body {
+    box-shadow: 6rem 0 #fff;
+}
+
+.stats-panel p > i {
+    border-color: #111;
+}
+
+.stats-panel p > i b {
+    border-color: #111;
+    background: #555;
+}
+
+.stats-panel p > i b:last-child {
+    background: #fff;
+}
+
+.action-panel button {
+    border-color: #111;
+    color: #111;
+    background: #fff;
+}
+
+.action-panel button:hover,
+.action-panel button:focus-visible {
+    border-color: #111;
+    background: #111;
+    color: #fff;
+}
+
+.dialogue-box,
+.options-box {
+    min-height: 22rem;
+    border: 0.3rem solid #111;
+    border-radius: 1.2rem;
+    background: #fff;
+    box-shadow: 0.3rem 0.3rem 0 #111;
+}
+
+.dialogue-box {
+    grid-template-columns: minmax(12rem, 30%) 1fr;
+}
+
+.character-panel {
+    background: #d7d7d7;
+}
+
+.character-head,
+.character-body {
+    border-color: #111;
+    background: #fff;
+}
+
+.dialogue-copy h3,
+.dialogue-copy p {
+    color: #111;
+}
+
+.options-box button {
+    border-color: #111;
+    color: #111;
+}
+
+.options-box button:hover,
+.options-box button:focus-visible {
+    background: #111;
+    color: #fff;
+}
+
+@media (max-width: 900px) {
+    .timeline::before {
+        left: 1.2rem;
+        width: 0.6rem;
+    }
+
+    .timeline::after {
+        left: -0.5rem;
+    }
+
+    .timeline-entry {
+        display: grid;
+        grid-template-columns: 3rem minmax(0, 1fr);
+        padding-left: 0;
+    }
+
+    .timeline-entry::after {
+        top: 1.9rem;
+        left: 1.2rem;
+        width: 2rem;
+    }
+
+    .timeline-marker {
+        grid-column: 1;
+        grid-row: 1;
+        margin-top: 0.5rem;
+    }
+
+    .timeline-meta {
+        grid-column: 2;
+        padding: 0 0 2rem 2rem;
+        text-align: left;
+    }
+
+    .timeline-content {
+        grid-column: 2;
+        padding-left: 2rem;
+    }
+
+    .timeline-content::before {
+        left: -2rem;
+        width: 2rem;
+    }
+}
+
+@media (max-width: 620px) {
+    .game-ui {
+        grid-template-columns: 1fr;
+    }
+
+    .battle-ui {
+        grid-column: auto;
+    }
+}
+
+/* Keep the timeline rails and prototype frame independent at every scale. */
+.timeline {
+    max-width: 150rem;
+}
+
+.timeline::before {
+    left: 30rem;
+    width: 0.8rem;
+}
+
+.timeline::after {
+    left: calc(30rem - 2rem);
+}
+
+.timeline-entry {
+    grid-template-columns: minmax(22rem, 28rem) 8rem minmax(0, 1fr);
+}
+
+.timeline-marker {
+    grid-column: 2;
+}
+
+.timeline-meta {
+    padding-right: 4rem;
+}
+
+.timeline-meta .timeline-description {
+    max-width: 24rem;
+    margin-left: auto;
+}
+
+.timeline-content {
+    padding-left: 4rem;
+}
+
+.timeline-content::before {
+    left: 0;
+    width: 4rem;
+}
+
+.game-ui {
+    position: relative;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 10;
+    margin: 3rem 0 2.5rem;
+    padding: 1.4rem;
+    overflow: hidden;
+}
+
+.battle-ui {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    padding: clamp(1rem, 2vw, 2rem);
+}
+
+.dialogue-box,
+.options-box {
+    position: absolute;
+    z-index: 2;
+    min-height: 0;
+    box-shadow: 0.2rem 0.2rem 0 #111;
+}
+
+.dialogue-box {
+    left: 3%;
+    right: 30%;
+    bottom: 3%;
+    width: auto;
+    height: 22%;
+}
+
+.options-box {
+    right: 3%;
+    bottom: 3%;
+    width: 24%;
+    height: 22%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.dialogue-copy {
+    padding: 1.2rem 1.5rem;
+    overflow: hidden;
+}
+
+.dialogue-copy h3,
+.dialogue-copy p {
+    margin: 0;
+    font-size: clamp(0.9rem, 1.5vw, 1.7rem);
+    line-height: 1.25;
+}
+
+.dialogue-copy h3 {
+    margin-bottom: 0.6rem;
+}
+
+.character-panel {
+    min-height: 0;
+}
+
+.character-art {
+    transform: scale(0.55);
+}
+
+.options-box button {
+    padding: 0.5rem;
+    font-size: clamp(0.8rem, 1.2vw, 1.5rem);
+}
+
+.action-panel {
+    position: absolute;
+    z-index: 1;
+    left: 3%;
+    bottom: 3%;
+    width: 28%;
+    padding: 1rem;
+    gap: 0.8rem;
+}
+
+.action-panel button {
+    padding: 0.6rem;
+    font-size: clamp(0.8rem, 1.2vw, 1.5rem);
+}
+
+@media (max-width: 900px) {
+    .timeline::before {
+        left: 1.2rem;
+    }
+
+    .timeline::after {
+        left: -0.5rem;
+    }
+
+    .timeline-entry {
+        grid-template-columns: 3rem minmax(0, 1fr);
+    }
+
+    .timeline-meta {
+        padding-right: 0;
+    }
+
+    .timeline-meta .timeline-description {
+        max-width: 48rem;
+        margin-left: 0;
+    }
+
+    .timeline-content {
+        padding-left: 2rem;
+    }
+
+    .timeline-content::before {
+        left: -2rem;
+        width: 2rem;
+    }
+}
+
+@media (max-width: 620px) {
+    .game-ui {
+        aspect-ratio: 4 / 3;
+        padding: 0.8rem;
+    }
+
+    .battle-ui {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 1fr;
+    }
+
+    .stats-panel {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        align-self: start;
+    }
+
+    .player-character,
+    .enemy-character {
+        display: none;
+    }
+
+    .dialogue-box {
+        right: 28%;
+        height: 25%;
+    }
+
+    .options-box {
+        width: 24%;
+        height: 25%;
+    }
+
+    .action-panel {
+        display: none;
+    }
+}
+
+/* Final alignment pass: keep the metadata, spine, and demo in separate rails. */
+.timeline {
+    --meta-column: minmax(22rem, 30rem);
+    --spine-column: 7rem;
+    max-width: 180rem;
+}
+
+.timeline::before {
+    left: calc(30rem + 3.1rem);
+    width: 0.9rem;
+}
+
+.timeline::after {
+    left: calc(30rem + 3.1rem - 2.2rem);
+    border-right-width: 2.2rem;
+    border-left-width: 2.2rem;
+}
+
+.timeline-entry {
+    grid-template-columns: var(--meta-column) var(--spine-column) minmax(0, 1fr);
+}
+
+.timeline-meta {
+    padding-right: 3.5rem;
+}
+
+.timeline-meta time,
+.timeline-meta h2,
+.timeline-meta .timeline-description {
+    position: relative;
+    z-index: 1;
+}
+
+.timeline-meta .timeline-description {
+    width: 100%;
+    max-width: 25rem;
+}
+
+.timeline-marker {
+    width: 3rem;
+    height: 3rem;
+    margin-left: 0;
+}
+
+.timeline-content {
+    padding-left: 3.5rem;
+}
+
+.timeline-content::before {
+    left: 0;
+    width: 3.5rem;
+}
+
+.game-ui {
+    width: 100%;
+    min-width: 0;
+    margin-top: 2rem;
+    padding: 1.2rem;
+    aspect-ratio: 16 / 9;
+}
+
+.battle-ui {
+    min-width: 0;
+}
+
+@media (min-width: 1100px) {
+    .timeline-content {
+        min-width: 70rem;
+    }
+
+    .game-ui {
+        min-width: 70rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .timeline {
+        --meta-column: 0rem;
+        --spine-column: 3rem;
+    }
+
+    .timeline::before {
+        left: 1.1rem;
+        width: 0.7rem;
+    }
+
+    .timeline::after {
+        left: -0.5rem;
+    }
+
+    .timeline-entry {
+        grid-template-columns: var(--spine-column) minmax(0, 1fr);
+    }
+
+    .timeline-meta {
+        grid-column: 2;
+        padding: 0 0 2rem 2rem;
+        text-align: left;
+    }
+
+    .timeline-meta .timeline-description {
+        max-width: 52rem;
+        margin-left: 0;
+    }
+
+    .timeline-content {
+        grid-column: 2;
+        min-width: 0;
+        padding-left: 2rem;
+    }
+
+    .timeline-content::before {
+        left: -2rem;
+        width: 2rem;
+    }
+}
+
+@media (max-width: 620px) {
+    .game-ui {
+        min-width: 0;
+        aspect-ratio: 4 / 3;
+    }
+}

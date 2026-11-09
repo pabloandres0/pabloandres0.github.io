@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Project | Pablo Andrés</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.boxicons.com/3.0.8/fonts/filled/boxicons-filled.min.css" rel="stylesheet">
+    <link href="https://cdn.boxicons.com/3.0.8/fonts/brands/boxicons-brands.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="final.css">
+    <link rel="stylesheet" href="header.css">
+</head>
+<body>
+    <header class="header">
+        <a href="index.html#home" class="logo" aria-label="Pablo Andrés home">
+            <span aria-hidden="true"></span>
+        </a>
+
+        <i class="bx bx-menu" id="menu-icon" role="button" tabindex="0" aria-label="Toggle navigation" aria-expanded="false"></i>
+
+        <nav class="navbar" aria-label="Primary navigation">
+            <a href="index.html#home">Home</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#services">Skills</a>
+            <a href="index.html#projects">Design Class Projects</a>
+            <a href="#final-project" aria-current="page">Final Project</a>
+        </nav>
+
+        <a href="mailto:pabloandres.rdzp@gmail.com">
+            <button type="button" class="gradient-btn">Contact Me</button>
+        </a>
+    </header>
+
+    <main id="final-project" class="final-project">
+        <section class="final-intro" aria-labelledby="final-title">
+            <p class="eyebrow">Design class final project</p>
+            <h1 id="final-title">Project development</h1>
+            <p class="final-intro__copy">A timeline of the ideas, interfaces, and decisions behind my final design project.</p>
+        </section>
+
+        <section class="timeline" aria-label="Final project timeline">
+            <article class="timeline-entry">
+                <div class="timeline-marker" aria-hidden="true"></div>
+                <div class="timeline-meta">
+                    <time datetime="2026-11-08">08.11.2026.</time>
+                    <h2>UI Elements</h2>
+                    <p class="timeline-description">The first interface study translates the game concept into a dialogue box, character status display, and selectable actions. These elements establish the basic structure for player feedback and choices.</p>
+                </div>
+                <div class="timeline-content">
+                    <div class="game-ui" aria-label="Recreated game interface">
+                        <section class="battle-ui" aria-label="Battle interface">
+                            <div class="status-card player-status">
+                                <strong>Lvl 100</strong>
+                                <span>Player 1</span>
+                                <i class="player-health" aria-label="Player health: 100 percent"></i>
+                            </div>
+                            <div class="status-card enemy-status">
+                                <strong>Lvl 100</strong>
+                                <span>Enemy 1</span>
+                                <i class="enemy-health" aria-label="Enemy health: 100 percent"></i>
+                            </div>
+                            <div class="battle-character player-character" aria-hidden="true">
+                                <span class="battle-head"></span>
+                                <span class="battle-body"></span>
+                            </div>
+                            <div class="battle-character enemy-character" aria-hidden="true">
+                                <span class="battle-head"></span>
+                                <span class="battle-body"></span>
+                            </div>
+                            <section class="stats-panel" aria-label="Enemy stats">
+                                <h3>Stats</h3>
+                                <p><span>Str</span><i><b></b><b></b><b></b><b></b></i></p>
+                                <p><span>Spd</span><i><b></b><b></b><b></b><b></b></i></p>
+                                <p><span>End</span><i><b></b><b></b><b></b><b></b></i></p>
+                                <p><span>Hp</span><i class="enemy-stat-health"><b></b><b></b><b></b><b></b></i></p>
+                            </section>
+                            <div class="action-panel">
+                                <button type="button" data-action="attack">Punch</button>
+                                <button type="button" data-action="attack">Kick</button>
+                                <button type="button" data-action="heal">Heal</button>
+                                <button type="button" data-action="charge">Charge</button>
+                            </div>
+                        </section>
+
+                        <section class="dialogue-box" aria-labelledby="character-name">
+                            <div class="character-panel" aria-hidden="true">
+                                <div class="character-art">
+                                    <span class="character-head"></span>
+                                    <span class="character-body"></span>
+                                </div>
+                            </div>
+                            <div class="dialogue-copy">
+                                <h3 id="character-name">EXAMPLE CHARACTER</h3>
+                                <p id="dialogue-text">Hello, this is a dialogue example&hellip; The quick brown fox jumps over the lazy dog.</p>
+                            </div>
+                        </section>
+
+                        <section class="options-box" aria-labelledby="options-title">
+                            <h3 id="options-title" class="sr-only">Dialogue options</h3>
+                            <button type="button" data-choice="hi">Say “Hi”</button>
+                            <button type="button" data-choice="bye">Say “Bye”</button>
+                        </section>
+                    </div>
+
+                    <p class="ui-description">The battle screen organizes player and enemy status, statistics, characters, and actions. The dialogue panel then gives the character a visual identity and a clear speaking area, while the options panel separates player choices into two simple, readable controls.</p>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="social-icons">
+            <a target="_blank" rel="noreferrer" href="https://github.com/pabloandres0" aria-label="GitHub">
+                <i class="bxl bx-github"></i>
+            </a>
+            <a target="_blank" rel="noreferrer" href="https://instagram.com/pabloandr.es" aria-label="Instagram">
+                <i class="bxl bx-instagram-alt"></i>
+            </a>
+        </div>
+
+        <ul class="list">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#about">About Me</a></li>
+            <li><a href="index.html#services">Skills</a></li>
+            <li><a href="index.html#projects">Design Class Projects</a></li>
+            <li><a href="#final-project">Final Project</a></li>
+        </ul>
+
+        <p class="copyright">© Pablo Andrés | All Rights Reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
