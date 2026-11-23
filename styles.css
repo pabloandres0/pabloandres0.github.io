@@ -366,6 +366,21 @@ section{
     align-items: center;
     gap: 3rem;
 }
+.projects-cta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12rem;
+    width: 100%;
+}
+.projects-cta .btn {
+    color: #0b1120;
+    text-align: center;
+    font-size: 3rem;
+}
+.projects-cta .btn:hover {
+    color: #0b1120;
+}
 .project-card{
     display: flex;
     flex-direction: column;
