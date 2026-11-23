@@ -6,7 +6,7 @@
 /* Reset generic section and span defaults from styles.css & header.css inside final project */
 .final-project section {
     min-height: auto;
-    padding: 0;
+    padding-top: 4rem;
 }
 
 .final-project span {
@@ -26,7 +26,7 @@
     min-height: 100vh;
     padding: 14rem 6% 8rem;
     background: var(--bg-color);
-    overflow-x: hidden;
+    overflow-x: clip;
 }
 
 /* Intro Section */
@@ -89,7 +89,7 @@
 
 .timeline-entry {
     display: grid;
-    grid-template-columns: 21rem 3.2rem 3.8rem minmax(0, 1fr);
+    grid-template-columns: 30rem 3.2rem 3.8rem minmax(0, 1fr);
     column-gap: 0;
     align-items: start;
     position: relative;
@@ -98,7 +98,7 @@
 /* Region 1: Left Meta */
 .timeline-meta {
     grid-column: 1;
-    text-align: right;
+    text-align: left;
     padding-right: 2.8rem;
 }
 
@@ -132,6 +132,7 @@
     min-height: 100%;
     display: flex;
     justify-content: center;
+    pointer-events: none;
 }
 
 .timeline-spine {
@@ -176,6 +177,7 @@
     grid-column: 3;
     position: relative;
     height: 100%;
+    pointer-events: none;
 }
 
 .timeline-connector {
@@ -194,6 +196,99 @@
     display: flex;
     flex-direction: column;
     gap: 2.2rem;
+}
+
+/* Timeline Media & Image Helpers */
+.timeline-content img {
+    background-color: white;
+    width: 100%;
+    height: auto;
+    border-radius: 1.4rem;
+    border: 2px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 1.2rem 3.5rem rgba(0, 0, 0, 0.45);
+    display: block;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.timeline-content img:hover {
+    border-color: var(--main-color);
+    transform: translateY(-2px);
+}
+
+.timeline-images-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+    gap: 1.8rem;
+    width: 100%;
+}
+
+.timeline-image-slot {
+    width: 100%;
+    min-height: 22rem;
+    border-radius: 1.4rem;
+    border: 2px dashed rgba(106, 241, 223, 0.4);
+    background: rgba(22, 27, 34, 0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5rem;
+    text-align: center;
+    color: #94a3b8;
+    gap: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.timeline-image-slot:hover {
+    border-color: var(--main-color);
+    background: rgba(22, 27, 34, 0.95);
+}
+
+.timeline-image-slot i {
+    font-size: 4rem;
+    color: var(--main-color);
+    opacity: 0.85;
+}
+
+.timeline-image-slot span {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #e2e8f0;
+}
+
+.timeline-image-slot small {
+    font-size: 1.3rem;
+    color: #64748b;
+}
+
+.timeline-note {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: #a0aec0;
+    margin: 0;
+}
+
+.timeline-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1rem 2.2rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-radius: 3rem;
+    background-color: var(--main-color);
+    color: #0b1120;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    width: fit-content;
+    margin-top: 0.5rem;
+}
+
+.timeline-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0.8rem 2rem rgba(106, 241, 223, 0.4);
+    color: #0b1120;
 }
 
 /* ==========================================================================

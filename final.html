@@ -28,7 +28,7 @@
             <a href="index.html#about">About</a>
             <a href="index.html#services">Skills</a>
             <a href="index.html#projects">Design Class Projects</a>
-            <a href="final.html" aria-current="page">Final Project</a>
+            <a href="#" aria-current="page">Final Project</a>
         </nav>
 
         <a href="mailto:pabloandres.rdzp@gmail.com">
@@ -38,197 +38,324 @@
 
     <main id="final-project" class="final-project">
         <section class="final-intro" aria-labelledby="final-title">
-            <p class="eyebrow">Design class final project</p>
             <h1 id="final-title">Project development</h1>
-            <p class="final-intro__copy">A timeline of the ideas, interfaces, and decisions behind my final design project.</p>
+            <p class="eyebrow">This is a timeline of every advancement done to the final project.</p>
         </section>
 
         <!-- Vertical Timeline -->
         <section class="timeline" aria-label="Final project timeline">
             <div class="timeline-container">
-                <article class="timeline-entry" id="entry-ui-elements">
-                    <!-- Region 1: Left (Title, Date, Description) -->
-                    <div class="timeline-meta">
-                        <time datetime="2026-11-08" class="timeline-date">08.11.2026.</time>
-                        <h2 class="timeline-title">UI Elements</h2>
-                        <p class="timeline-description">The first interface study translates the game concept into a dialogue box, character status display, and selectable actions. These elements establish the basic structure for player feedback and choices.</p>
-                    </div>
 
-                    <!-- Region 2: Middle (Thick vertical timeline spine with visible entry marker) -->
+                <!-- 1. Client Proposal -->
+                <article class="timeline-entry" id="entry-proposal">
+                    <div class="timeline-meta">
+                        <time datetime="2026-09-15" class="timeline-date">15.09.2026.</time>
+                        <h2 class="timeline-title">Client Proposal</h2>
+                        <p class="timeline-description">Hypothetical client proposal for an RPG prototype with turn-based combat, narrative dialogue, and stylized visual art.</p>
+                    </div>
                     <div class="timeline-spine-track" aria-hidden="true">
                         <div class="timeline-spine"></div>
                         <div class="timeline-marker"></div>
                     </div>
-
-                    <!-- Region 3: Horizontal connector from the entry toward the content -->
                     <div class="timeline-connector-track" aria-hidden="true">
                         <div class="timeline-connector"></div>
                     </div>
-
-                    <!-- Region 4: Right (Entry content) -->
                     <div class="timeline-content">
-                        <!-- UI Demo inside bounded game-screen frame -->
-                        <div class="game-frame-container">
-                            <div class="game-frame" role="region" aria-label="Interactive game interface mockup">
-                                <!-- Battle Area -->
-                                <div class="game-battlefield">
-                                    <!-- Player Status Card -->
-                                    <div class="status-card player-status-card" aria-label="Player 1 status">
-                                        <div class="status-level">Lvl 100</div>
-                                        <div class="status-info-row">
-                                            <span class="status-name">Player 1</span>
-                                            <div class="health-bar-container" role="progressbar" aria-label="Player 1 Health" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-                                                <div class="health-bar-fill player-health-fill" style="width: 100%;"></div>
-                                            </div>
-                                        </div>
-                                    </div>
+                        <img src="/images/final/proposal/1.png" alt="Hypothetical Client Proposal and Project Implications" loading="lazy">
+                        <p class="timeline-note">dasd.</p>
+                    </div>
+                </article>
 
-                                    <!-- Enemy Status Card -->
-                                    <div class="status-card enemy-status-card" aria-label="Enemy 1 status">
-                                        <div class="status-level">Lvl 100</div>
-                                        <div class="status-info-row">
-                                            <span class="status-name">Enemy 1</span>
-                                            <div class="health-bar-container" role="progressbar" aria-label="Enemy 1 Health" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-                                                <div class="health-bar-fill enemy-health-fill" style="width: 100%;"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Stats Panel -->
-                                    <div class="stats-panel" aria-label="Combat statistics">
-                                        <h3 class="stats-heading">Stats</h3>
-                                        <div class="stat-line">
-                                            <span class="stat-tag">Str</span>
-                                            <div class="stat-cells" aria-label="Strength: 3 out of 4">
-                                                <span class="stat-cell active"></span>
-                                                <span class="stat-cell active"></span>
-                                                <span class="stat-cell active"></span>
-                                                <span class="stat-cell"></span>
-                                            </div>
-                                        </div>
-                                        <div class="stat-line">
-                                            <span class="stat-tag">Spd</span>
-                                            <div class="stat-cells" aria-label="Speed: 4 out of 4">
-                                                <span class="stat-cell active"></span>
-                                                <span class="stat-cell active"></span>
-                                                <span class="stat-cell active"></span>
-                                                <span class="stat-cell active"></span>
-                                            </div>
-                                        </div>
-                                        <div class="stat-line">
-                                            <span class="stat-tag">End</span>
-                                            <div class="stat-cells" aria-label="Endurance: 3 out of 4">
-                                                <span class="stat-cell active"></span>
-                                                <span class="stat-cell active"></span>
-                                                <span class="stat-cell active"></span>
-                                                <span class="stat-cell"></span>
-                                            </div>
-                                        </div>
-                                        <div class="stat-line">
-                                            <span class="stat-tag">Hp</span>
-                                            <div class="stat-cells enemy-stat-cells" aria-label="Enemy HP: 2 out of 4">
-                                                <span class="stat-cell active enemy-hp-seg-1"></span>
-                                                <span class="stat-cell active enemy-hp-seg-2"></span>
-                                                <span class="stat-cell enemy-hp-seg-3"></span>
-                                                <span class="stat-cell enemy-hp-seg-4"></span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Characters Stage -->
-                                    <div class="battle-characters" aria-hidden="true">
-                                        <!-- Player -->
-                                        <div class="character-box player-char-box">
-                                            <svg viewBox="0 0 160 190" class="char-svg player-svg" xmlns="http://www.w3.org/2000/svg">
-                                                <g class="pedestal-group">
-                                                    <ellipse cx="80" cy="162" rx="64" ry="20" fill="#555555" stroke="#161a22" stroke-width="4.5" />
-                                                    <ellipse cx="80" cy="154" rx="64" ry="20" fill="#dedede" stroke="#161a22" stroke-width="4.5" />
-                                                    <ellipse cx="80" cy="152" rx="54" ry="15" fill="#8d8d8d" stroke="#161a22" stroke-width="3" />
-                                                    <line x1="44" y1="156" x2="52" y2="167" stroke="#161a22" stroke-width="3.5" />
-                                                    <line x1="72" y1="160" x2="80" y2="171" stroke="#161a22" stroke-width="3.5" />
-                                                    <line x1="100" y1="160" x2="108" y2="171" stroke="#161a22" stroke-width="3.5" />
-                                                    <line x1="122" y1="154" x2="128" y2="163" stroke="#161a22" stroke-width="3.5" />
-                                                </g>
-                                                <g class="fighter-player" stroke="#161a22" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none">
-                                                    <circle cx="86" cy="38" r="16" fill="#ffffff" />
-                                                    <path d="M 82 54 L 72 96" />
-                                                    <path d="M 72 96 L 58 126 L 46 146 L 60 147" />
-                                                    <path d="M 72 96 L 84 122 L 96 147 L 110 147" />
-                                                    <path d="M 78 64 L 60 84 L 66 98" />
-                                                    <path d="M 80 64 L 102 76 L 114 66" />
-                                                    <circle cx="116" cy="64" r="5" fill="#ffffff" stroke="#161a22" stroke-width="4" />
-                                                </g>
-                                            </svg>
-                                        </div>
-
-                                        <!-- Enemy -->
-                                        <div class="character-box enemy-char-box">
-                                            <svg viewBox="0 0 160 190" class="char-svg enemy-svg" xmlns="http://www.w3.org/2000/svg">
-                                                <g class="pedestal-group">
-                                                    <ellipse cx="80" cy="162" rx="60" ry="19" fill="#555555" stroke="#161a22" stroke-width="4.5" />
-                                                    <ellipse cx="80" cy="154" rx="60" ry="19" fill="#dedede" stroke="#161a22" stroke-width="4.5" />
-                                                    <ellipse cx="80" cy="152" rx="50" ry="14" fill="#8d8d8d" stroke="#161a22" stroke-width="3" />
-                                                    <line x1="48" y1="157" x2="54" y2="166" stroke="#161a22" stroke-width="3.5" />
-                                                    <line x1="74" y1="160" x2="80" y2="170" stroke="#161a22" stroke-width="3.5" />
-                                                    <line x1="102" y1="159" x2="108" y2="168" stroke="#161a22" stroke-width="3.5" />
-                                                </g>
-                                                <g class="fighter-enemy" stroke="#161a22" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none">
-                                                    <circle cx="70" cy="36" r="15" fill="#ffffff" />
-                                                    <path d="M 72 51 L 84 88" />
-                                                    <path d="M 84 88 L 76 118 L 66 144 L 54 144" />
-                                                    <path d="M 84 88 L 96 116 L 102 143 L 114 143" />
-                                                    <path d="M 75 60 L 64 76 L 66 90" />
-                                                    <path d="M 77 60 L 92 72 L 90 92" />
-                                                </g>
-                                            </svg>
-                                        </div>
-                                    </div>
-
-                                    <!-- Action Controls Panel -->
-                                    <div class="action-panel" aria-label="Combat Actions">
-                                        <div class="action-buttons-grid">
-                                            <button type="button" class="combat-btn" data-action="punch">PUNCH</button>
-                                            <button type="button" class="combat-btn" data-action="kick">Kick</button>
-                                            <button type="button" class="combat-btn" data-action="heal">Heal</button>
-                                            <button type="button" class="combat-btn" data-action="charge">Charge</button>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Bottom Area: Dialogue Box & Options Box -->
-                                <div class="game-dialogue-area">
-                                    <!-- Dialogue Box -->
-                                    <div class="dialogue-panel" aria-labelledby="dialogue-name">
-                                        <div class="dialogue-portrait" aria-hidden="true">
-                                            <svg viewBox="0 0 76 76" class="portrait-svg" xmlns="http://www.w3.org/2000/svg">
-                                                <rect width="76" height="76" rx="12" fill="#1b4965" stroke="#0d2838" stroke-width="3" />
-                                                <circle cx="38" cy="28" r="15" fill="#ffffff" />
-                                                <path d="M 16 72 C 16 50 26 47 38 47 C 50 47 60 50 60 72 Z" fill="#ffffff" />
-                                            </svg>
-                                        </div>
-                                        <div class="dialogue-content">
-                                            <div id="dialogue-name" class="dialogue-speaker">EXAMPLE CHARACTER</div>
-                                            <p id="dialogue-text" class="dialogue-speech">Hello, this is a dialogue example… The quick brown fox jumps over the lazy dog.</p>
-                                        </div>
-                                    </div>
-
-                                    <!-- Options Box -->
-                                    <div class="options-panel" aria-label="Dialogue options">
-                                        <button type="button" class="choice-btn active" data-choice="hi" aria-pressed="true">
-                                            <span class="choice-indicator"><span class="choice-indicator-inner"></span></span>
-                                            <span class="choice-label">Say “Hi”</span>
-                                        </button>
-                                        <button type="button" class="choice-btn" data-choice="bye" aria-pressed="false">
-                                            <span class="choice-indicator"><span class="choice-indicator-inner"></span></span>
-                                            <span class="choice-label">Say “Bye”</span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
+                <!-- 2. Moodboard -->
+                <article class="timeline-entry" id="entry-moodboard">
+                    <div class="timeline-meta">
+                        <time datetime="2026-09-22" class="timeline-date">22.09.2026.</time>
+                        <h2 class="timeline-title">Moodboard</h2>
+                        <p class="timeline-description">Visual research gathering atmospheric references, futuristic compositions, and tonal directions for the game universe.</p>
+                    </div>
+                    <div class="timeline-spine-track" aria-hidden="true">
+                        <div class="timeline-spine"></div>
+                        <div class="timeline-marker"></div>
+                    </div>
+                    <div class="timeline-connector-track" aria-hidden="true">
+                        <div class="timeline-connector"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-images-grid">
+                            <img src="/images/final/moodboard/1.png" alt="Moodboard reference 1" loading="lazy">
+                            <img src="/images/final/moodboard/2.png" alt="Moodboard reference 2" loading="lazy">
+                            <img src="/images/final/moodboard/3.png" alt="Moodboard reference 3" loading="lazy">
+                            <img src="/images/final/moodboard/4.png" alt="Moodboard reference 4" loading="lazy">
+                            <img src="/images/final/moodboard/5.png" alt="Moodboard reference 5" loading="lazy">
                         </div>
+                        <p class="timeline-note">Investigación de estética visual, iluminación y diseño de escenarios futuristas.</p>
+                    </div>
+                </article>
 
-                        <!-- Explanatory description below the frame -->
-                        <p class="ui-description">The battle screen organizes player and enemy status, statistics, characters, and actions. The dialogue panel then gives the character a visual identity and a clear speaking area, while the options panel separates player choices into two simple, readable controls.</p>
+                <!-- 3. Sketches -->
+                <article class="timeline-entry" id="entry-sketches">
+                    <div class="timeline-meta">
+                        <time datetime="2026-09-29" class="timeline-date">29.09.2026.</time>
+                        <h2 class="timeline-title">Sketches</h2>
+                        <p class="timeline-description">First batch of hand-drawn sketches exploring character poses, battle screen layouts, and fighting stances.</p>
+                    </div>
+                    <div class="timeline-spine-track" aria-hidden="true">
+                        <div class="timeline-spine"></div>
+                        <div class="timeline-marker"></div>
+                    </div>
+                    <div class="timeline-connector-track" aria-hidden="true">
+                        <div class="timeline-connector"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-images-grid">
+                            <img src="/images/final/sketches/1.png" alt="Character and battle sketches 1" loading="lazy">
+                            <img src="/images/final/sketches/2.png" alt="Character and battle sketches 2" loading="lazy">
+                            <img src="/images/final/sketches/3.png" alt="Character and battle sketches 3" loading="lazy">
+                        </div>
+                        <p class="timeline-note">Exploración analógica de composiciones en papel, posturas de personajes y diagramación del combate.</p>
+                    </div>
+                </article>
+
+                <!-- 4. Lineart / Clean -->
+                <article class="timeline-entry" id="entry-lineart">
+                    <div class="timeline-meta">
+                        <time datetime="2026-10-06" class="timeline-date">06.10.2026.</time>
+                        <h2 class="timeline-title">Lineart & Clean</h2>
+                        <p class="timeline-description">Refining the rough drawings into clean digital lineart, establishing silhouettes, vector balance, and character pedestals.</p>
+                    </div>
+                    <div class="timeline-spine-track" aria-hidden="true">
+                        <div class="timeline-spine"></div>
+                        <div class="timeline-marker"></div>
+                    </div>
+                    <div class="timeline-connector-track" aria-hidden="true">
+                        <div class="timeline-connector"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-images-grid">
+                            <img src="/images/final/lineart/1.png" alt="Clean digital lineart 1" loading="lazy">
+                            <img src="/images/final/lineart/2.png" alt="Clean digital lineart 2" loading="lazy">
+                            <img src="/images/final/lineart/3.png" alt="Clean digital lineart 3" loading="lazy">
+                            <img src="/images/final/lineart/4.png" alt="Clean digital lineart 4" loading="lazy">
+                            <img src="/images/final/lineart/5.png" alt="Clean digital lineart 5" loading="lazy">
+                        </div>
+                        <p class="timeline-note">Trazos vectoriales definidos y estandarización anatómica de los luchadores.</p>
+                    </div>
+                </article>
+
+                <!-- 5. Artstyle Choice -->
+                <article class="timeline-entry" id="entry-artstyle">
+                    <div class="timeline-meta">
+                        <time datetime="2026-10-13" class="timeline-date">13.10.2026.</time>
+                        <h2 class="timeline-title">Artstyle Choice</h2>
+                        <p class="timeline-description">Selecting a futuristic artstyle after evaluating three concept directions generated with Gemini and Nano Banana 2.</p>
+                    </div>
+                    <div class="timeline-spine-track" aria-hidden="true">
+                        <div class="timeline-spine"></div>
+                        <div class="timeline-marker"></div>
+                    </div>
+                    <div class="timeline-connector-track" aria-hidden="true">
+                        <div class="timeline-connector"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-images-grid">
+                            <img src="/images/final/artstyle/1.png" alt="Artstyle concept 1" loading="lazy">
+                            <img src="/images/final/artstyle/2.png" alt="Artstyle concept 2" loading="lazy">
+                            <img src="/images/final/artstyle/3.png" alt="Artstyle concept 3" loading="lazy">
+                        </div>
+                        <p class="timeline-note">Elección de la dirección visual futurista entre tres propuestas conceptuales.</p>
+                    </div>
+                </article>
+
+                <!-- 6. Interface Design -->
+                <article class="timeline-entry" id="entry-interface">
+                    <div class="timeline-meta">
+                        <time datetime="2026-10-20" class="timeline-date">20.10.2026.</time>
+                        <h2 class="timeline-title">Interface Design</h2>
+                        <p class="timeline-description">HUD and combat interface elements inspired by Dieter Rams' classic Braun ET66 calculator aesthetic.</p>
+                    </div>
+                    <div class="timeline-spine-track" aria-hidden="true">
+                        <div class="timeline-spine"></div>
+                        <div class="timeline-marker"></div>
+                    </div>
+                    <div class="timeline-connector-track" aria-hidden="true">
+                        <div class="timeline-connector"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-images-grid">
+                            <img src="/images/final/interface/1.png" alt="Braun ET66 calculator inspiration" loading="lazy">
+                            <img src="/images/final/interface/2.png" alt="Interface layout sketch" loading="lazy">
+                            <img src="/images/final/interface/3.png" alt="Digital UI elements mockup" loading="lazy">
+                        </div>
+                        <p class="timeline-note">Estructuración modular de botones, paneles de estado y tipografía industrial.</p>
+                    </div>
+                </article>
+
+                <!-- 7. Sketches / Concepts (Art Transcoding) -->
+                <article class="timeline-entry" id="entry-concepts">
+                    <div class="timeline-meta">
+                        <time datetime="2026-10-26" class="timeline-date">26.10.2026.</time>
+                        <h2 class="timeline-title">Art Transcoding</h2>
+                        <p class="timeline-description">Transcoding art techniques from Arcane: combining 2D simplicity with 3D volume, vibrant shadow illumination, and lineless rendering.</p>
+                    </div>
+                    <div class="timeline-spine-track" aria-hidden="true">
+                        <div class="timeline-spine"></div>
+                        <div class="timeline-marker"></div>
+                    </div>
+                    <div class="timeline-connector-track" aria-hidden="true">
+                        <div class="timeline-connector"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <img src="/images/final/concepts/1.png" alt="Arcane visual transcoding study" loading="lazy">
+                        <p class="timeline-note">Técnica pictórica que genera volumen tridimensional con sombras saturadas y sin líneas de contorno en personajes y fondos.</p>
+                    </div>
+                </article>
+
+                <!-- 8. Palettes -->
+                <article class="timeline-entry" id="entry-palettes">
+                    <div class="timeline-meta">
+                        <time datetime="2026-10-30" class="timeline-date">30.10.2026.</time>
+                        <h2 class="timeline-title">Color Palettes</h2>
+                        <p class="timeline-description">Defining a systematic color hierarchy split into General Use Colors for baseline UI and Special Use Colors for dynamic accents.</p>
+                    </div>
+                    <div class="timeline-spine-track" aria-hidden="true">
+                        <div class="timeline-spine"></div>
+                        <div class="timeline-marker"></div>
+                    </div>
+                    <div class="timeline-connector-track" aria-hidden="true">
+                        <div class="timeline-connector"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-images-grid">
+                            <img src="/images/final/palettes/1.png" alt="General Use Colors palette" loading="lazy">
+                            <img src="/images/final/palettes/2.png" alt="Special Use Colors palette" loading="lazy">
+                        </div>
+                        <p class="timeline-note">Paleta cromática balanceada entre tonos neutros de interfaz y contrastes vivos para interactividad.</p>
+                    </div>
+                </article>
+
+                <!-- 9. Figma Migration -->
+                <article class="timeline-entry" id="entry-figma">
+                    <div class="timeline-meta">
+                        <time datetime="2026-11-03" class="timeline-date">03.11.2026.</time>
+                        <h2 class="timeline-title">Figma System</h2>
+                        <p class="timeline-description">Moving all interface assets, dialogue boxes, and combat layouts into Figma to build a modular UI component library.</p>
+                    </div>
+                    <div class="timeline-spine-track" aria-hidden="true">
+                        <div class="timeline-spine"></div>
+                        <div class="timeline-marker"></div>
+                    </div>
+                    <div class="timeline-connector-track" aria-hidden="true">
+                        <div class="timeline-connector"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-images-grid">
+                            <img src="/images/final/figma/1.png" alt="Figma workspace layout 1" loading="lazy">
+                            <img src="/images/final/figma/2.png" alt="Figma workspace layout 2" loading="lazy">
+                        </div>
+                        <p class="timeline-note">Componentes digitales organizados en Figma para consistencia visual y diseño de pantallas responsivas.</p>
+                    </div>
+                </article>
+
+                <!-- 10. User Flow -->
+                <article class="timeline-entry" id="entry-userflow">
+                    <div class="timeline-meta">
+                        <time datetime="2026-11-07" class="timeline-date">07.11.2026.</time>
+                        <h2 class="timeline-title">User Flow</h2>
+                        <p class="timeline-description">Mapping the player experience: navigation between main menus, battle triggers, dialogue branches, and decision states.</p>
+                    </div>
+                    <div class="timeline-spine-track" aria-hidden="true">
+                        <div class="timeline-spine"></div>
+                        <div class="timeline-marker"></div>
+                    </div>
+                    <div class="timeline-connector-track" aria-hidden="true">
+                        <div class="timeline-connector"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <img src="/images/final/userflow/1.png" alt="Game navigation and user flow architecture" loading="lazy">
+                        <p class="timeline-note">Diagrama de flujo de interacción y árbol de navegación de la experiencia del jugador.</p>
+                    </div>
+                </article>
+
+                <!-- 11. Level Design: Artificial Forest -->
+                <article class="timeline-entry" id="entry-forest">
+                    <div class="timeline-meta">
+                        <time datetime="2026-11-11" class="timeline-date">11.11.2026.</time>
+                        <h2 class="timeline-title">Artificial Forest</h2>
+                        <p class="timeline-description">Level design featuring a digital forest simulation with virtual enemies where players practice combat and mechanics.</p>
+                    </div>
+                    <div class="timeline-spine-track" aria-hidden="true">
+                        <div class="timeline-spine"></div>
+                        <div class="timeline-marker"></div>
+                    </div>
+                    <div class="timeline-connector-track" aria-hidden="true">
+                        <div class="timeline-connector"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <img src="/images/final/forest/1.png" alt="Artificial Forest simulation level environment" loading="lazy">
+                        <p class="timeline-note">Entorno digital que recrea la naturaleza en un espacio simulado para combates de entrenamiento.</p>
+                    </div>
+                </article>
+
+                <!-- 12. Level Design: Great Mullen -->
+                <article class="timeline-entry" id="entry-city">
+                    <div class="timeline-meta">
+                        <time datetime="2026-11-15" class="timeline-date">15.11.2026.</time>
+                        <h2 class="timeline-title">Great Mullen</h2>
+                        <p class="timeline-description">A futuristic city featuring flexible, shiny street surfaces, modern architectural valleys, and battles with cyborgs and robots.</p>
+                    </div>
+                    <div class="timeline-spine-track" aria-hidden="true">
+                        <div class="timeline-spine"></div>
+                        <div class="timeline-marker"></div>
+                    </div>
+                    <div class="timeline-connector-track" aria-hidden="true">
+                        <div class="timeline-connector"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <img src="/images/final/city/1.png" alt="Great Mullen futuristic metropolis level" loading="lazy">
+                        <p class="timeline-note">Ciudad futurista con materiales reflectivos y encuentros contra cyborgs y autómatas.</p>
+                    </div>
+                </article>
+
+                <!-- 13. Using Godot -->
+                <article class="timeline-entry" id="entry-godot">
+                    <div class="timeline-meta">
+                        <time datetime="2026-11-19" class="timeline-date">19.11.2026.</time>
+                        <h2 class="timeline-title">Using Godot</h2>
+                        <p class="timeline-description">Developing the interactive game prototype in Godot Engine, programming menu systems, UI animations, and gameplay triggers.</p>
+                    </div>
+                    <div class="timeline-spine-track" aria-hidden="true">
+                        <div class="timeline-spine"></div>
+                        <div class="timeline-marker"></div>
+                    </div>
+                    <div class="timeline-connector-track" aria-hidden="true">
+                        <div class="timeline-connector"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <img src="/images/final/godot/1.png" alt="Godot Engine prototype menu implementation" loading="lazy">
+                        <a href="https://www.youtube.com/watch?v=hyTu5ZTR5Yk" target="_blank" rel="noreferrer" class="timeline-btn">
+                            <i class="bxl bx-youtube"></i> Watch Menu Demo on YouTube
+                        </a>
+                        <p class="timeline-note">Implementación interactiva del menú principal y transiciones de pantalla en Godot 4.</p>
+                    </div>
+                </article>
+
+                <!-- 14. Development Progress -->
+                <article class="timeline-entry" id="entry-progress">
+                    <div class="timeline-meta">
+                        <time datetime="2026-11-23" class="timeline-date">23.11.2026.</time>
+                        <h2 class="timeline-title">Progress Overview</h2>
+                        <p class="timeline-description">Consolidated overview of character designs, combat balance, level settings, and prototype deliverables ready for class exposition.</p>
+                    </div>
+                    <div class="timeline-spine-track" aria-hidden="true">
+                        <div class="timeline-spine"></div>
+                        <div class="timeline-marker"></div>
+                    </div>
+                    <div class="timeline-connector-track" aria-hidden="true">
+                        <div class="timeline-connector"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <img src="/images/final/progress/1.png" alt="Final development progress overview" loading="lazy">
+                        <p class="timeline-note">Estado integral del proyecto presentado para la entrega final y exposición de 10 minutos.</p>
                     </div>
                 </article>
             </div>
@@ -250,7 +377,7 @@
             <li><a href="index.html#about">About Me</a></li>
             <li><a href="index.html#services">Skills</a></li>
             <li><a href="index.html#projects">Design Class Projects</a></li>
-            <li><a href="final.html">Final Project</a></li>
+            <li><a href="#">Final Project</a></li>
         </ul>
 
         <p class="copyright">© Pablo Andrés | All Rights Reserved</p>

@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    scroll-behavior: smooth;
     font-family: "Poppins", sans-serif;
 }
 :root {
@@ -17,13 +16,14 @@
 }
 html {
     font-size: 60%;
-    overflow-x: hidden;
+    scroll-behavior: smooth;
+    overflow-x: clip;
 }
 body {
     /* background-color: var(--bg-color); */
     background-color: black;
     color: var(--text-color);
-    overflow-x: hidden;
+    overflow-x: clip;
 }
 /* .header {
     position: fixed;
@@ -630,8 +630,8 @@ section{
 
     list-style: none;
     overflow-x: auto;
-    overflow-y: hidden;
-    overscroll-behavior-x: contain;
+    overflow-y: visible;
+    overscroll-behavior: auto;
     scroll-snap-type: x mandatory;
 }
 
